@@ -1,9 +1,9 @@
 import os.path
 
 import jam.session
-import jam.run
 
-from jam.utils import realpath
+from jam.command import Command
+
 
 class Qt4(jam.session.MakeSession):
 
@@ -36,12 +36,8 @@ class Qt4(jam.session.MakeSession):
             "-system-zlib",
             "-system-sqlite"]
 
-
     def configure(self):
         if self.config.get("verbose"):
-            args.append("-v")
-        args = self._args_replace()
-        cmd = [os.path.join(self.src_path, "configure")]
-        cmd.extend(args)
-        jam.run.call(cmd, self.config.get("debug"),
-                     cwd=realpath(self.build_path))
+            self.args.append("-v")
+        cmd = os.path.join(self.src_path, "configure")
+        Command(cmd, self.args, self.build_path, self.debug).run()
