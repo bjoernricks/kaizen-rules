@@ -16,10 +16,10 @@ class Hg(MakeSession):
         Copy(self.src_path, self.build_path).run()
 
     def build(self):
-        Make(self.build_path, self.config.get("debug")).run(["all"])
+        Make(self.build_path, self.debug).run(["all"])
 
     def destroot(self):
-        Make(self.build_path, self.config.get("debug")).run(
-                ["PREFIX=" + self.config.get("jam_prefix"),
+        Make(self.build_path, self.debug).run(
+                ["PREFIX=" + self.config.get("prefix"),
                  "DESTDIR=" + self.dest_dir,
                  "install"])
