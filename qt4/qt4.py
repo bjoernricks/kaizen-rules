@@ -1,11 +1,10 @@
 import os.path
 
-import jam.session
+from jam.session import MakeSession
+from jam.system import Command
 
-from jam.command import Command
 
-
-class Qt4(jam.session.MakeSession):
+class Qt4(MakeSession):
 
     url = "http://get.qt.nokia.com/qt/source/qt-everywhere-opensource-src-4.7.2.tar.gz"
     hash = { "md5" : "66b992f5c21145df08c99d21847f4fdb" }
@@ -17,11 +16,11 @@ class Qt4(jam.session.MakeSession):
     src_path = "%(src_dir)s/qt-everywhere-opensource-src-%(version)s"
 
     depends = ["dbus",
-             "sqlite3",
-             "libpng",
-             "openssl",
-             "libjpeg",
-             "zlib"]
+               "sqlite3",
+               "libpng",
+               "openssl",
+               "libjpeg",
+               "zlib"]
 
     args = ["-opensource",
             "-confirm-license",
