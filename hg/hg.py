@@ -1,5 +1,5 @@
 from jam.session import MakeSession
-from jam.command import Make, Copy
+from jam.system import Make, Copy
 
 class Hg(MakeSession):
 
@@ -23,3 +23,7 @@ class Hg(MakeSession):
                 ["PREFIX=" + self.config.get("prefix"),
                  "DESTDIR=" + self.dest_dir,
                  "install"])
+
+    def distclean(self):
+        # TODO remove destroot and copy source to build
+        self.clean()
