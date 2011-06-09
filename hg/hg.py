@@ -11,7 +11,6 @@ class Hg(MakeSession):
 
     src_path = "%(src_dir)s/mercurial-%(version)s"
 
-
     def configure(self):
         Copy(self.src_path, self.build_path).run()
 
