@@ -6,7 +6,7 @@ from jam.system import Command
 
 class Qt4(MakeSession):
 
-    url = "http://get.qt.nokia.com/qt/source/qt-everywhere-opensource-src-4.7.2.tar.gz"
+    url = "http://get.qt.nokia.com/qt/source/qt-everywhere-opensource-src-%(version)s.tar.gz"
     hash = { "md5" : "66b992f5c21145df08c99d21847f4fdb" }
     version = "4.7.2"
     name = "qt4"
