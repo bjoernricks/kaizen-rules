@@ -6,7 +6,6 @@ class Hg(MakeSession):
     url = "http://mercurial.selenic.com/release/mercurial-1.8.3.tar.gz"
     hash = { "md5" : "7afea936dfdb21220064cac6402f8743" }
     version = "1.8.3"
-    name = "hg"
     depends = ["python-docutils"]
 
     src_path = "%(src_dir)s/mercurial-%(version)s"
