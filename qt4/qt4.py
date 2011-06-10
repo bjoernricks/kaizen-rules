@@ -9,7 +9,6 @@ class Qt4(MakeSession):
     url = "http://get.qt.nokia.com/qt/source/qt-everywhere-opensource-src-%(version)s.tar.gz"
     hash = { "md5" : "66b992f5c21145df08c99d21847f4fdb" }
     version = "4.7.2"
-    name = "qt4"
 
     patches = ["http://qt.nokia.com/files/qt-patches/blacklist-fraudulent-comodo-certificates-patch.diff"]
 
