@@ -1,5 +1,5 @@
 from jam.session import ConfigureSession
-from jam.buildsystem import Make
+from jam.system import Make
 
 class Quilt(ConfigureSession):
 
