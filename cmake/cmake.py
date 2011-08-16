@@ -21,5 +21,6 @@ class Cmake(jam.session.ConfigureSession):
     # uncomment to add additonal patches 
     # all patches will be copied to %(downloadroot)s/%(session)s/patches
     # e.g. patches = ["01-patch.diff", "http://url.com/remotepatch.diff"]
-    # patches = [""]
+    patches =  [["http://cmake.org/gitweb?p=cmake.git;a=patch;h=702538eaa3315f3fcad9f1daea01e6a83928967b",
+                 "01-findqt4.diff"]]
 
