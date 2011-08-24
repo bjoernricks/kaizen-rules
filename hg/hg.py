@@ -1,3 +1,5 @@
+import os.path
+
 from jam.session import MakeSession
 from jam.system import Make, Copy
 
@@ -21,6 +23,9 @@ class Hg(MakeSession):
                 ["PREFIX=" + self.config.get("prefix"),
                  "DESTDIR=" + self.dest_dir,
                  "install"])
+        Copy(os.path.join(self.build_path, "contrib", "bash_completion"),
+             os.path.join(self.destroot_path + self.prefix, "etc",
+                          "bash_completion.d", "mercurial")).run()
 
     def distclean(self):
         # TODO remove destroot and copy source to build
