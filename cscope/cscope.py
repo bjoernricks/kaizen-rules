@@ -21,7 +21,7 @@ class Cscope(jam.session.ConfigureSession):
     # uncomment to add additonal patches 
     # all patches will be copied to %(downloadroot)s/%(session)s/patches
     # e.g. patches = ["01-patch.diff", "http://url.com/remotepatch.diff"]
-    patches = ["%(session_path)s/01-ncurses.diff"]
+    patches = ["01-ncurses.diff"]
 
     # uncomment to add a dependency on an other session
     # depends = [""]
