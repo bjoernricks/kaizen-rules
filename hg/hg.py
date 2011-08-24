@@ -20,7 +20,7 @@ class Hg(MakeSession):
 
     def destroot(self):
         Make(self.build_path, self.debug).run(
-                ["PREFIX=" + self.config.get("prefix"),
+                ["PREFIX=" + self.prefix,
                  "DESTDIR=" + self.dest_dir,
                  "install"])
         Copy(os.path.join(self.build_path, "contrib", "bash_completion"),
