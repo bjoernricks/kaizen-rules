@@ -26,6 +26,9 @@ class Hg(MakeSession):
         Copy(os.path.join(self.build_path, "contrib", "bash_completion"),
              os.path.join(self.destroot_path + self.prefix, "etc",
                           "bash_completion.d", "mercurial")).run()
+        Copy(os.path.join(self.build_path, "contrib", "hgk"),
+             os.path.join(self.destroot_path + self.prefix, "bin",
+                          "hgk")).run()
 
     def distclean(self):
         # TODO remove destroot and copy source to build
