@@ -18,6 +18,6 @@ class Sqlite(jam.session.ConfigureSession):
                           "-DSQLITE_ENABLE_FTS4",
                          ] 
 
-    args = ["--enable-readline", "--enable-threadsafe",
-            "--enable-dynamic-extensions",]
+    configure_args = ["--enable-readline", "--enable-threadsafe",
+                      "--enable-dynamic-extensions",]
 

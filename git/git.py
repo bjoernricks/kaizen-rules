@@ -11,10 +11,10 @@ class Git(jam.session.ConfigureSession):
     version = "1.7.6"
     name = "git"
 
-    args = [
-            "--with-gitconfig=etc/gitconfig",
-            "--with-gitattributes=etc/gitattributes",
-            ]
+    configure_args = [
+                      "--with-gitconfig=etc/gitconfig",
+                      "--with-gitattributes=etc/gitattributes",
+                     ]
 
     def configure(self):
         Copy(self.src_path, self.build_path).run()

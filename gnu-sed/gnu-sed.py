@@ -7,5 +7,5 @@ class GnuSed(jam.session.ConfigureSession):
     version = "4.2.1"
     name = "sed"
 
-    args = ["--program-prefix=g"]
+    configure_args = ["--program-prefix=g"]
 

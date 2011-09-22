@@ -11,23 +11,7 @@ class Ctags(jam.session.ConfigureSession):
     version = "5.8"
     name = "ctags"
 
-    # uncomment to set path to source directory
-    # default is %(src_dir)s/%(name)s-%(version)s
-    # src_path = ""
-
-    # uncomment to set path to build directory (normally not necessary)
-    # build_path = ""
-
-    # uncomment to pass additonal parameters to configure script
-    args = ["--enable-macro-patterns"]
-
-    # uncomment to add additonal patches 
-    # all patches will be copied to %(downloadroot)s/%(session)s/patches
-    # e.g. patches = ["01-patch.diff", "http://url.com/remotepatch.diff"]
-    # patches = [""]
-
-    # uncomment to add a dependency on an other session
-    # depends = [""]
+    configure_args = ["--enable-macro-patterns"]
 
     def destroot(self):
         prefix = self.prefix[1:]

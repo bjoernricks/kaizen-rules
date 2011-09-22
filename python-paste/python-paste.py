@@ -8,5 +8,4 @@ class Pythonpaste(jam.session.PythonSession):
     version = "1.7.5.1"
     name = "Paste"
 
-    # uncomment to add a dependency on an other session
     depends = ["python-distribute"]

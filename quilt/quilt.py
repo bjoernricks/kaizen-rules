@@ -12,9 +12,9 @@ class Quilt(ConfigureSession):
     
     build_path = "%(src_path)s"
     
-    args = ["--with-sed=%(prefix)s/bin/gsed",
-            "--without-getopt",
-            "--without-rpmbuild"]
+    configure_args = ["--with-sed=%(prefix)s/bin/gsed",
+                      "--without-getopt",
+                      "--without-rpmbuild"]
 
     def destroot(self):
         Make(self.build_path, self.config.get("debug")).run(["BUILD_ROOT=" 

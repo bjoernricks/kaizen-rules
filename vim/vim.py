@@ -10,30 +10,17 @@ class Vim(jam.session.ConfigureSession):
     version = "7.3"
     name = "vim"
 
-    # uncomment to set path to source directory
-    # default is %(src_dir)s/%(name)s-%(version)s
     src_path = "%(src_dir)s/vim73"
 
-    # uncomment to set path to build directory (normally not necessary)
-    # build_path = ""
+    configure_args = ["--enable-cscope",
+                      "--enable-pythoninterp=yes",
+                      "--enable-multibyte",
+                      "--disable-netbeans",
+                      "--disable-gui",
+                      "--with-local-dir=%(prefix)s",
+                     ]
 
-    # uncomment to pass additonal parameters to configure script
-    args = ["--enable-cscope",
-            "--enable-pythoninterp=yes",
-            "--enable-multibyte",
-            "--disable-netbeans",
-            "--disable-gui",
-            "--with-local-dir=%(prefix)s",
-            ]
-
-    # uncomment to add additonal patches 
-    # all patches will be copied to %(downloadroot)s/%(session)s/patches
-    # e.g. patches = ["01-patch.diff", "http://url.com/remotepatch.diff"]
-    # patches = []
-
-    # uncomment to add a dependency on an other session
     depends = ["ctags", "cscope"]
 
-    def configure(self):
+    def pre_configure(self):
         Copy(self.src_path, self.build_path).run()
-        super(Vim, self).configure()

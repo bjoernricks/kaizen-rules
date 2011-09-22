@@ -21,18 +21,18 @@ class Qt4(MakeSession):
                "libjpeg",
                "zlib"]
 
-    args = ["-opensource",
-            "-confirm-license",
-            "-no-sql-db2",
-            "-no-sql-ibase",
-            "-no-sql-oci",
-            "-no-sql-tds",
-            "-no-phonon",
-            "-no-phonon-backend",
-            "-prefix %(prefix)s",
-            "-system-libpng",
-            "-system-zlib",
-            "-system-sqlite"]
+    configure_args = ["-opensource",
+                      "-confirm-license",
+                      "-no-sql-db2",
+                      "-no-sql-ibase",
+                      "-no-sql-oci",
+                      "-no-sql-tds",
+                      "-no-phonon",
+                      "-no-phonon-backend",
+                      "-prefix %(prefix)s",
+                      "-system-libpng",
+                      "-system-zlib",
+                      "-system-sqlite"]
 
     def configure(self):
         if self.config.get("verbose"):
