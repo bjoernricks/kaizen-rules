@@ -5,10 +5,10 @@ from jam.system import Copy, Configure
 
 class Git(jam.session.ConfigureSession):
 
-    url = "http://www.kernel.org/pub/software/scm/git/git-1.7.6.tar.bz2"
-    hash = { "md5" : "9e0a438eb71e89eedb61f89470ed32a0",
-             "sha1" : "c519b0765c419c84b561bb4a2a86526b16d95cde" }
-    version = "1.7.6"
+    url =  "http://git-core.googlecode.com/files/git-%(version)s.tar.gz"
+    hash = { "md5" : "e0b7afcc0e5e43bbb82f85598ae34bd8",
+             "sha1" : "df91e2c32d6097ab1c9d0edc56dd8cecb4e9b686" }
+    version = "1.7.6.4"
     name = "git"
 
     configure_args = [
@@ -16,12 +16,8 @@ class Git(jam.session.ConfigureSession):
                       "--with-gitattributes=etc/gitattributes",
                      ]
 
-    def configure(self):
+    def pre_configure(self):
         Copy(self.src_path, self.build_path).run()
-        args = self.args
-        args.append("--prefix=" + self.prefix)
-        Configure(args, self.build_path, self.build_path,
-                  self.debug).run()
 
     def post_destroot(self):
         Copy(os.path.join(self.build_path, "contrib", "completion",
