@@ -1,6 +1,6 @@
 import jam.session
 
-class Sqlite(jam.session.ConfigureSession):
+class Sqlite3(jam.session.ConfigureSession):
 
     url = "http://www.sqlite.org/sqlite-autoconf-3070701.tar.gz"
     hash = { "md5" : "554026fe7fac47b1cf61c18d5fe43419",
