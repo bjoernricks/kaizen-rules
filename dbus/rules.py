@@ -1,4 +1,7 @@
+import os.path
 import jam.session
+
+from jam.system import Move
 
 class Dbus(jam.session.ConfigureSession):
 
@@ -9,3 +12,8 @@ class Dbus(jam.session.ConfigureSession):
     name = "dbus"
 
     configure_args = ["--without-x", "--enable-launchd"]
+
+    def post_destroot(self):
+        path = "Library"
+        Move(os.path.join(self.dest_dir, path), os.path.join(self.dest_dir +
+            self.prefix, path)).run()
