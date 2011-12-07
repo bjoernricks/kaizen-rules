@@ -1,4 +1,7 @@
+import os.path
+
 import jam.session
+from jam.system import Delete
 
 class Diffutils(jam.session.ConfigureSession):
 
@@ -8,3 +11,6 @@ class Diffutils(jam.session.ConfigureSession):
     version = "3.0"
     name = "diffutils"
 
+    def post_destroot(self):
+        Delete(os.path.join(self.dest_dir + self.prefix, "share", "info",
+            "dir")).run()
