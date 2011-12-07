@@ -20,7 +20,7 @@ class Vim(jam.session.ConfigureSession):
                       "--with-local-dir=%(prefix)s",
                      ]
 
-    depends = ["ctags", "cscope"]
+    depends = ["ctags", "cscope", "gettext", "libiconv"]
 
     def pre_configure(self):
         Copy(self.src_path, self.build_path).run()
