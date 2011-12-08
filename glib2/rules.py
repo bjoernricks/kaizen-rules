@@ -10,12 +10,12 @@ class Glib(jam.session.ConfigureSession):
 
     configure_args = ["--disable-dtrace"]
 
-    patches = [["patch-configure.diff", 0],
-               ["patch-glib-2.0.pc.in.diff", 0],
-               ["patch-glib_gunicollate.c.diff", 0],
-               ["patch-gi18n.h.diff", 0],
-               ["patch-gio_xdgmime_xdgmime.c.diff", 0],
-               ["patch-gio_gdbusprivate.c.diff", 0],
+    patches = ["patch-configure.diff",
+               "patch-glib-2.0.pc.in.diff",
+               "patch-glib_gunicollate.c.diff",
+               "patch-gi18n.h.diff",
+               "patch-gio_xdgmime_xdgmime.c.diff",
+               "patch-gio_gdbusprivate.c.diff",
                ]
 
     depends = ["gettext", "libiconv", "zlib", "libffi"]

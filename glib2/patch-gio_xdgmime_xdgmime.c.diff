@@ -1,5 +1,5 @@
---- gio/xdgmime/xdgmime.c.orig	2009-03-12 22:09:52.000000000 -0600
-+++ gio/xdgmime/xdgmime.c	2009-04-09 23:41:01.000000000 -0600
+--- a/gio/xdgmime/xdgmime.c.orig	2009-03-12 22:09:52.000000000 -0600
++++ b/gio/xdgmime/xdgmime.c	2009-04-09 23:41:01.000000000 -0600
 @@ -257,7 +257,7 @@
  
    xdg_data_dirs = getenv ("XDG_DATA_DIRS");

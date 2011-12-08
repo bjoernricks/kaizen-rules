@@ -1,5 +1,5 @@
---- glib/gunicollate.c.orig	2009-03-31 18:04:20.000000000 -0500
-+++ glib/gunicollate.c	2010-03-06 17:59:08.000000000 -0600
+--- a/glib/gunicollate.c.orig	2009-03-31 18:04:20.000000000 -0500
++++ b/glib/gunicollate.c	2010-03-06 17:59:08.000000000 -0600
 @@ -26,6 +26,9 @@
  #include <wchar.h>
  #endif
