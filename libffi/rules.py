@@ -7,3 +7,6 @@ class Libffi(jam.session.ConfigureSession):
              "sha1" : "97abf70e6a6d315d9259d58ac463663051d471e1" }
     version = "3.0.10"
     name = "libffi"
+
+    patches = ["patch-configure-darwin11.diff",
+               "patch-configure.diff"]
