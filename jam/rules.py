@@ -1,4 +1,8 @@
-import jam.session.PythonSession
+import jam.session
 
-class Jam(jam.session.PythonSession):
-    pass
+class Jam(jam.session.PythonDevelopSession):
+
+    src_path = "%(package_path)s"
+    build_path = "%(package_path)s"
+    version = "0.1"
+    name = "jam"
