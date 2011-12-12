@@ -11,6 +11,8 @@ class Git(jam.session.ConfigureSession):
     version = "1.7.6.4"
     name = "git"
 
+    depends = ["python", "gettext", "git-manpages"]
+
     configure_args = [
                       "--with-gitconfig=etc/gitconfig",
                       "--with-gitattributes=etc/gitattributes",
