@@ -24,5 +24,8 @@ class Git(jam.session.ConfigureSession):
     def post_destroot(self):
         Copy(os.path.join(self.build_path, "contrib", "completion",
                           "git-completion.bash"),
-             os.path.join(self.destroot_path + self.prefix, "etc",
+             os.path.join(self.dest_path, "etc",
                           "bash_completion.d", "git")).run()
+        Copy(os.path.join(self.session_path, "contrib", "giteditor"),
+             os.path.join(self.dest_path, "share", "git",
+                          "contrib", "giteditor")).run()

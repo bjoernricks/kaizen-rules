@@ -1,0 +1,34 @@
+#!/bin/sh
+
+case "${EDITOR}" in
+    "")
+        EDITOR="vim -f -o"
+        ;;
+    emacs)
+        EDITOR="$EDITOR -nw"
+        ;;
+    gvim|vim|vi)
+        EDITOR="$EDITOR -f -o"
+        ;;
+esac
+
+GIT_TMP=""
+cleanup_exit() {
+    rm -rf "$GIT_TMP"
+}
+
+# Remove temporary files even if we get interrupted
+trap "cleanup_exit" 0 # normal exit
+trap "exit 255" HUP INT QUIT ABRT TERM
+
+GIT_TMP=$(mktemp -d ${TMPDIR-/tmp}/giteditor.XXXXXX)
+[ x$GIT_TMP != x -a -d $GIT_TMP ] || {
+  echo "Could not create temporary directory! Exiting." 1>&2
+  exit 1
+}
+
+git diff --staged . > "$GIT_TMP/diff"
+
+$EDITOR "$1" "$GIT_TMP/diff" || exit $?
+
+exit $?
