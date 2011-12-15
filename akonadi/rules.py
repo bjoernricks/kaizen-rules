@@ -8,6 +8,11 @@ class Akonadi(jam.session.CMakeSession):
     version = "1.6.2"
     name = "akonadi"
 
-    # configure_args = [""]
+    configure_args = ["-DINSTALL_QSQLITE_IN_QT_PREFIX=TRUE",
+                      "-DAKONADI_BUILD_QSQLITE=TRUE",
+                      "-DDATABASE_BACKEND=SQLITE",
+                      "-DAKONADI_BUILD_TESTS=FALSE",
+                     ]
 
-    depends = ["qt4", "automoc4", "shared-mime-info"]
+    depends = ["qt4", "automoc4", "shared-mime-info", "boost", "soprano",
+               "dbus", "sqlite3"]
