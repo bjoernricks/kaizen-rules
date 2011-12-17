@@ -6,9 +6,9 @@ from jam.system import Command, Make, Copy
 class QtCreator(jam.session.MakeSession):
 
     url = "http://get.qt.nokia.com/qtcreator/qt-creator-%(version)s-src.tar.gz"
-    hash = { "md5" : "8aa296ed9034f847bd53ee0424e5ef08",
-             "sha1" : "620fe944994fffe0812a1474deff78e07b34025b" }
-    version = "2.3.1"
+    hash = { "md5" : "80c1a2be4c685ce147c42424ad977e1a",
+             "sha1" : "12934e34fdda3f493812e671f8db1fb789578e91" }
+    version = "2.4.0"
     name = "qt-creator"
 
     src_path = "%(src_dir)s/%(name)s-%(version)s-src"
