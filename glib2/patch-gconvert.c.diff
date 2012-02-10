@@ -1,0 +1,10 @@
+diff --git a/glib/gconvert.c b/glib/gconvert.c
+index b363bca..9924c6c 100644
+--- a/glib/gconvert.c
++++ b/glib/gconvert.c
+@@ -62,7 +62,6 @@
+ #error GNU libiconv in use but included iconv.h not from libiconv
+ #endif
+ #if !defined(USE_LIBICONV_GNU) && defined (_LIBICONV_H)
+-#error GNU libiconv not in use but included iconv.h is from libiconv
+ #endif
