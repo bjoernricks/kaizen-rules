@@ -2,7 +2,7 @@ import os.path
 
 import jam.session
 
-from jam.system import Command
+from jam.system import Command, Replace
 
 class Sharedmimeinfo(jam.session.ConfigureSession):
 
@@ -16,7 +16,13 @@ class Sharedmimeinfo(jam.session.ConfigureSession):
 
     configure_args = ["--disable-update-mimedb"]
 
+    def pre_configure(self):
+        Replace('env = "/usr/local/share/"PATH_SEPARATOR"/usr/share/',
+                'env = "' + self.prefix +
+                '/share"PATH_SEPARATOR"/usr/local/share/"PATH_SEPARATOR"/usr/share/',
+                self.src_path + "/update-mime-database.c").run()
+
     def post_activate(self):
         Command("update-mime-database", ["-V " + os.path.join(self.prefix,
                                                               "share", "mime")],
-                os.path.join(self.prefix, "bin")).run()
+                os.path.join(self.prefix, "bin"), self.verbose).run()
