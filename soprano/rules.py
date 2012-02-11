@@ -8,4 +8,10 @@ class Soprano(jam.session.CMakeSession):
     version = "2.7.4"
     name = "soprano"
 
-    depends = ["raptor2", "rasqal", "redland", "clucene", "qt4", "libiodbc"]
+    depends = ["raptor2", "rasqal", "redland", "clucene", "qt4", "libiodbc",
+               "strigi"]
+
+    runtime_depends = ["virtuoso"]
+
+    configure_args = ["-DSOPRANO_DISABLE_SESAME2_BACKEND=ON",
+                      "-DCMAKE_BUILD_TYPE=Release"]
