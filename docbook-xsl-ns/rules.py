@@ -1,4 +1,3 @@
-import os
 import jam.session
 
 from jam.system import Copy, Mkdirs
