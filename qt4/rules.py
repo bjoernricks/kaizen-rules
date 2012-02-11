@@ -16,6 +16,8 @@ class Qt4(jam.session.ConfigureSession):
     depends = ["dbus",
                "sqlite3",
                "libpng",
+               "libjpeg",
+               "libtiff",
                "openssl",
                "pkg-config",
                "zlib"]
