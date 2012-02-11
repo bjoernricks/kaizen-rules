@@ -18,5 +18,7 @@ class Virtuosoopensource(jam.session.ConfigureSession):
                "gnu-awk",
                ]
 
+    configure_args = ["--disable-mono"]
+
     def distclean(self):
-        pass
+        Delete(self.src_path).run()
