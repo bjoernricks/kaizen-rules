@@ -6,3 +6,5 @@ class Jam(jam.session.PythonDevelopSession):
     build_path = "%(package_path)s"
     version = "0.1"
     name = "jam"
+
+    runtime_depends = ["python-bz2file"]
