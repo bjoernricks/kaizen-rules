@@ -1,0 +1,11 @@
+--- a/CMakeLists.txt.orig	2012-02-10 19:03:20.000000000 +0100
++++ b/CMakeLists.txt	2012-02-10 19:03:39.000000000 +0100
+@@ -17,7 +17,7 @@
+ INCLUDE_DIRECTORIES( ${clucene_SOURCE_DIR}/src )
+ INCLUDE_DIRECTORIES( ${clucene_BINARY_DIR}/src )
+ 
+-SUBDIRS (src/CLucene test src/demo)
++SUBDIRS (src/CLucene test )
+ 
+ OPTION(ENABLE_DEBUG
+   "enable debug support"
