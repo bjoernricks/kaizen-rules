@@ -9,3 +9,7 @@ class Attica(jam.session.CMakeSession):
     name = "attica"
 
     depends = ["qt4"]
+
+    patches = ["patch-lib-CMakeLists.txt.diff"]
+
+    configure_args = ["-DCMAKE_BUILD_TYPE=Release"]
