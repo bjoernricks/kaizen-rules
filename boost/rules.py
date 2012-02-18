@@ -1,7 +1,7 @@
 import os.path
 import jam.session
 
-from jam.system import Command, Copy
+from jam.system import Command, Copy, Replace
 
 class Boost(jam.session.Session):
 
@@ -24,6 +24,10 @@ class Boost(jam.session.Session):
     def configure(self):
         cmd = os.path.join(self.src_path, "bootstrap.sh")
         Command(cmd, self.configure_args, self.src_path, self.debug).run()
+
+    def post_configure(self):
+        Replace("-install_name \"", "-install_name \"" + self.prefix + "/lib/",
+                self.src_path + "/tools/build/v2/tools/darwin.jam").run()
 
     def build(self):
         self.build_args.append("-j" + str(self.buildjobs))
