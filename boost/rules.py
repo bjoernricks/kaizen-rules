@@ -26,6 +26,7 @@ class Boost(jam.session.Session):
         Command(cmd, self.configure_args, self.src_path, self.debug).run()
 
     def build(self):
+        self.build_args.append("-j" + str(self.buildjobs))
         cmd = os.path.join(self.src_path, "b2")
         Command(cmd, self.build_args, self.src_path, self.debug).run()
 
