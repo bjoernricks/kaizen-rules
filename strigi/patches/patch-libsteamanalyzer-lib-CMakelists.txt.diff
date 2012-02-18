@@ -1,0 +1,11 @@
+--- a/libstreamanalyzer/lib/CMakeLists.txt.orig	2012-02-12 16:07:38.000000000 +0100
++++ b/libstreamanalyzer/lib/CMakeLists.txt	2012-02-12 16:09:24.000000000 +0100
+@@ -82,6 +82,8 @@
+ 	VERSION ${LIBSTREAMANALYZER_VERSION}
+ 	SOVERSION ${LIBSTREAMANALYZER_SOVERSION}
+ 	DEFINE_SYMBOL MAKE_STREAMANALYZER_LIB
++  INSTALL_NAME_DIR ${LIB_DESTINATION}
++
+ )
+ target_link_libraries(streamanalyzer streamanalyzerstatic)
+ 

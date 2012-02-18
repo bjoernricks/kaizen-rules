@@ -1,0 +1,10 @@
+--- a/libstreams/lib/CMakeLists.txt.orig	2011-06-02 11:28:57.000000000 +0200
++++ b/libstreams/lib/CMakeLists.txt	2012-02-12 16:12:30.000000000 +0100
+@@ -54,6 +54,7 @@
+ 	VERSION ${STRIGI_VERSION_STRING}
+ 	SOVERSION ${STRIGI_VERSION_MAJOR}
+ 	DEFINE_SYMBOL MAKE_STREAMS_LIB
++  INSTALL_NAME_DIR ${LIB_DESTINATION}
+ )
+ target_link_libraries(streams ${ZLIB_LIBRARIES} ${BZIP2_LIBRARIES} ${ICONV_LIBRARIES})
+ install(TARGETS streams

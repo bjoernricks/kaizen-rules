@@ -9,3 +9,8 @@ class Strigi(jam.session.CMakeSession):
     name = "strigi"
 
     depends = ["libxml2", "clucene", "dbus", "qt4"]
+
+    patches = ["patch-libsteamanalyzer-lib-CMakelists.txt.diff",
+               "patch-libstreams-lib-CMakeLists.txt.diff"]
+
+    configure_args = ["-DCMAKE_BUILD_TYPE=Release"]
