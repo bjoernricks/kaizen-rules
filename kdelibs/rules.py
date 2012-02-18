@@ -19,5 +19,6 @@ class Kdelibs(jam.session.CMakeSession):
                       "-DWITH_HSPELL=OFF",
                       "-DWITH_FAM=OFF",
                       "-DBUNDLE_INSTALL_DIR=%(apps_dir)s/KDE4",
-                      "-DKDE_DISTRIBUTION_TEXT=\"jam software manager\"",
+                      # "-DKDE_DISTRIBUTION_TEXT=jam software manager",
+                      "-DCMAKE_BUILD_TYPE=Release",
                       ]
