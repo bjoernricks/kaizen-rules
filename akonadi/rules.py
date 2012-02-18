@@ -12,6 +12,8 @@ class Akonadi(jam.session.CMakeSession):
                       "-DAKONADI_BUILD_QSQLITE=TRUE",
                       "-DDATABASE_BACKEND=SQLITE",
                       "-DAKONADI_BUILD_TESTS=FALSE",
+                      "-DCMAKE_BUILD_TYPE=Release",
+                      "-DAKONADI_BUNDLE_PATH=%(apps_dir)s/KDE4",
                      ]
 
     depends = ["qt4", "automoc4", "shared-mime-info", "boost", "soprano",
