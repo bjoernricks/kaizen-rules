@@ -1,5 +1,7 @@
 import jam.session
 
+from jam.system import Quilt
+
 class Libdbusmenuqt(jam.session.CMakeSession):
 
     url = "http://launchpad.net/libdbusmenu-qt/trunk/%(version)s/+download/libdbusmenu-qt-%(version)s.tar.bz2"
@@ -9,5 +11,7 @@ class Libdbusmenuqt(jam.session.CMakeSession):
     name = "libdbusmenu-qt"
 
     depends = ["qt4"]
+
+    patchsystem = Quilt
 
     configure_args = ["-DWITH_DOC=OFF"]
