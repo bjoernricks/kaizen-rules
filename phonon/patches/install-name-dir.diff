@@ -1,0 +1,12 @@
+Index: phonon-4.6.0/phonon/CMakeLists.txt
+===================================================================
+--- phonon-4.6.0.orig/phonon/CMakeLists.txt	2011-12-19 21:30:45.000000000 +0100
++++ phonon-4.6.0/phonon/CMakeLists.txt	2012-02-19 19:54:04.000000000 +0100
+@@ -103,6 +103,7 @@
+                              SOVERSION ${PHONON_LIB_SOVERSION}
+                              DEFINE_SYMBOL MAKE_PHONON_LIB
+                              LINK_INTERFACE_LIBRARIES ""
++                             INSTALL_NAME_DIR "${CMAKE_INSTALL_PREFIX}/lib"
+                              )
+ # LINK_INTERFACE_LIBRARIES: By default don't add any linked libraries to the "exported"
+ # link interfaces, so that executables linking against this library
