@@ -10,10 +10,11 @@ class Kdepimruntime(jam.session.CMakeSession):
 
     depends = ["akonadi", "shared-mime-info", "kdelibs", "kdepimlibs",
                "libxml2", "soprano", "shared-desktop-ontologies", "strigi",
-               "libxslt", "perl", "automoc4", "qt4", "boost",
+               "libxslt", "perl", "automoc4", "qt4", "boost", "oxygen-icons",
                ]
 
     configure_args = [
                       "-DBUNDLE_INSTALL_DIR=%(apps_dir)s/KDE4",
                       "-DKDE_DISTRIBUTION_TEXT=\"jam software manager\"",
+                      "-DCMAKE_BUILD_TYPE=Release",
                       ]
