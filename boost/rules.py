@@ -1,7 +1,7 @@
 import os.path
 import jam.session
 
-from jam.system import Command, Copy, Replace
+from jam.system import Command, Replace
 
 class Boost(jam.session.Session):
 
