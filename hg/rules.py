@@ -15,7 +15,7 @@ class Hg(MakeSession):
     src_path = "%(src_dir)s/mercurial-%(version)s"
 
     def configure(self):
-        Copy(self.src_path, self.build_path).run()
+        Copy(self.src_path + "/*", self.build_path).run()
 
     def build(self):
         Make(self.build_path, self.debug).run(["all"])
@@ -36,5 +36,4 @@ class Hg(MakeSession):
                           "hgk")).run()
 
     def distclean(self):
-        # TODO remove destroot and copy source to build
-        self.clean()
+        Delete(self.build_path).run()
