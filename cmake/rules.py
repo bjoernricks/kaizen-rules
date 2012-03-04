@@ -1,5 +1,7 @@
 import jam.session
 
+from jam.system import Delete, Quilt
+
 class Cmake(jam.session.ConfigureSession):
 
     url = "http://www.cmake.org/files/v2.8/cmake-2.8.5.tar.gz"
@@ -12,6 +14,7 @@ class Cmake(jam.session.ConfigureSession):
                       "--system-libs", "--datadir=/share/cmake",
                       "--no-system-libarchive"]
 
-    patches =  [["http://cmake.org/gitweb?p=cmake.git;a=patch;h=702538eaa3315f3fcad9f1daea01e6a83928967b",
-                 "01-findqt4.diff"]]
+    patchsystem = Quilt
 
+    def distclean(self):
+        Delete(self.build_path).run()
