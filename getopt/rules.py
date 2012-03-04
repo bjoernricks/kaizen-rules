@@ -14,7 +14,7 @@ class Getopt(jam.session.Session):
     patches = ["patch-Makefile.diff"]
 
     def configure(self):
-        Copy(self.src_path, self.build_path).run()
+        Copy(self.src_path + "/*", self.build_path).run()
 
     def build(self):
         Make(self.build_path, self.debug).run(
