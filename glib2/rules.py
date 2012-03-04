@@ -29,7 +29,7 @@ class Glib(jam.session.ConfigureSession):
 
 
     def pre_configure(self):
-        Copy(self.src_path, self.build_path).run()
+        Copy(self.src_path + "/*", self.build_path).run()
         for f in ["/gio/xdgmime/xdgmime.c", "/gio/gdbusprivate.c"]:
             Replace("@@PREFIX@@", self.prefix, self.build_path + f).run()
 
