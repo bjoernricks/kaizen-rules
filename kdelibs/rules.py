@@ -10,7 +10,7 @@ class Kdelibs(jam.session.CMakeSession):
 
     depends = ["qt4", "perl", "zlib", "strigi", "attica", "openssl",
                "soprano", "shared-desktop-ontologies", "dbus", "libdbusmenu-qt",
-               "automoc4", "xz", "bzip2", "pcre", "libjpeg",
+               "automoc4", "xz", "bzip2", "pcre", "libjpeg", "avahi",
                "giflib", "docbook-xsl", "docbook-xml", "grantlee", "qca"]
 
     configure_args = ["-DWITH_ENCHANT=ON",
