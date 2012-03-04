@@ -12,5 +12,4 @@ class Pyside(jam.session.CMakeSession):
 
     depends = ["python", "qt4", "shiboken", "generatorrunner"]
 
-    configure_args = ["-DBUILD_TESTS=FALSE",
-            "-DALTERNATIVE_QT_INCLUDE_DIR=/Library/Frameworks"]
+    configure_args = ["-DBUILD_TESTS=FALSE",]
