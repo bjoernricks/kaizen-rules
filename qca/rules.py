@@ -14,8 +14,6 @@ class Qca(jam.session.ConfigureSession):
 
     configure_args = ["--no-framework"]
 
-    build_args = ["INSTALL_ROOT=%(dest_dir)", "install"]
-
     depends = ["qt4"]
 
     def configure(self):
@@ -46,3 +44,6 @@ class Qca(jam.session.ConfigureSession):
         #qmake sucks! why not supporting DESTDIR???
         args = ["INSTALL_ROOT=" + self.dest_dir, "install"]
         Make(self.build_path, self.debug).run(args)
+
+    def distclean(self):
+        pass
