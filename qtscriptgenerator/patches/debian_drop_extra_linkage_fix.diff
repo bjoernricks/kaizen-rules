@@ -1,0 +1,59 @@
+From: Modestas Vainius <modestas@vainius.eu>
+Subject: [PATCH] Reduce excess linkage
+
+Do not link to unnecessary libraries.
+
+Signed-off-by: Modestas Vainius <modestas@vainius.eu>
+
+---
+ qtbindings/qtbindingsbase.pri                      |    2 ++
+ qtbindings/qtscript_core/qtscript_core.pro         |    2 ++
+ qtbindings/qtscript_uitools/qtscript_uitools.pro   |    2 ++
+ .../qtscript_xmlpatterns/qtscript_xmlpatterns.pro  |    2 ++
+ 4 files changed, 8 insertions(+), 0 deletions(-)
+
+Index: qtscriptgenerator-src-0.2.0/qtbindings/qtbindingsbase.pri
+===================================================================
+--- qtscriptgenerator-src-0.2.0.orig/qtbindings/qtbindingsbase.pri	2012-02-23 08:49:59.000000000 +0100
++++ qtscriptgenerator-src-0.2.0/qtbindings/qtbindingsbase.pri	2012-02-23 08:50:19.000000000 +0100
+@@ -6,3 +6,5 @@
+ CONFIG += debug_and_release
+ GENERATEDCPP = ../../generated_cpp
+ TARGET=$$qtLibraryTarget($$TARGET)
++QMAKE_LIBS_THREAD =
++QMAKE_LIBS_OPENGL =
+Index: qtscriptgenerator-src-0.2.0/qtbindings/qtscript_core/qtscript_core.pro
+===================================================================
+--- qtscriptgenerator-src-0.2.0.orig/qtbindings/qtscript_core/qtscript_core.pro	2012-02-23 08:47:08.000000000 +0100
++++ qtscriptgenerator-src-0.2.0/qtbindings/qtscript_core/qtscript_core.pro	2012-02-23 08:50:19.000000000 +0100
+@@ -1,4 +1,6 @@
+ TARGET = qtscript_core
+ include(../qtbindingsbase.pri)
++qt:load(qt)
++LIBS -= -lQtGui
+ SOURCES += $$GENERATEDCPP/com_trolltech_qt_core/plugin.cpp
+ include($$GENERATEDCPP/com_trolltech_qt_core/com_trolltech_qt_core.pri)
+Index: qtscriptgenerator-src-0.2.0/qtbindings/qtscript_uitools/qtscript_uitools.pro
+===================================================================
+--- qtscriptgenerator-src-0.2.0.orig/qtbindings/qtscript_uitools/qtscript_uitools.pro	2012-02-23 08:47:08.000000000 +0100
++++ qtscriptgenerator-src-0.2.0/qtbindings/qtscript_uitools/qtscript_uitools.pro	2012-02-23 08:50:19.000000000 +0100
+@@ -1,5 +1,7 @@
+ TARGET = qtscript_uitools
+ include(../qtbindingsbase.pri)
+ CONFIG += uitools
++QT -= xml
++qt:load(qt)
+ SOURCES += $$GENERATEDCPP/com_trolltech_qt_uitools/plugin.cpp
+ include($$GENERATEDCPP/com_trolltech_qt_uitools/com_trolltech_qt_uitools.pri)
+Index: qtscriptgenerator-src-0.2.0/qtbindings/qtscript_xmlpatterns/qtscript_xmlpatterns.pro
+===================================================================
+--- qtscriptgenerator-src-0.2.0.orig/qtbindings/qtscript_xmlpatterns/qtscript_xmlpatterns.pro	2012-02-23 08:47:08.000000000 +0100
++++ qtscriptgenerator-src-0.2.0/qtbindings/qtscript_xmlpatterns/qtscript_xmlpatterns.pro	2012-02-23 08:50:19.000000000 +0100
+@@ -2,5 +2,7 @@
+ include(../qtbindingsbase.pri)
+ QT -= gui
+ QT += xmlpatterns network
++qt:load(qt)
++LIBS -= -lQtNetwork
+ SOURCES += $$GENERATEDCPP/com_trolltech_qt_xmlpatterns/plugin.cpp
+ include($$GENERATEDCPP/com_trolltech_qt_xmlpatterns/com_trolltech_qt_xmlpatterns.pri)

@@ -1,0 +1,6 @@
+phonon_include.diff
+debian_support_out_of_source_tree_build.diff
+upstream_support_later_phonon.diff
+debian_drop_extra_linkage_fix.diff
+debian_simple_top_makefile.diff
+qtbindings_no_debug.diff

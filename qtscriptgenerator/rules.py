@@ -10,26 +10,20 @@ class Qtscriptgenerator(jam.session.MakeSession):
     version = "0.2.0"
     name = "qtscriptgenerator-src"
 
-    build_path = "%(src_path)s"
+    depends = ["qt4", "phonon"]
 
     patchsystem = Quilt
 
-    def configure(self):
-        Mkdirs(self.build_path + "/generator").run()
-        Command("qmake", ["-o", "Makefile", self.src_path + \
-            "/generator/generator.pro"],
-                self.build_path + "/generator", self.debug).run()
-        Mkdirs(self.build_path + "/qtbindings").run()
-        Command("qmake", ["-o", "Makefile", self.src_path + \
-            "/qtbindings/qtbindings.pro"],
-                self.build_path + "/qtbindings", self.debug).run()
+    build_path = "%(src_path)s"
 
-    def build(self):
-        Make(self.build_path + "/generator", self.debug).run()
-        Command(self.build_path + "/generator/generator", ["--include-paths=" +\
-            self.prefix + "/include"], self.build_path + "/generator/", self.debug).run()
-        Make(self.build_path + "/qtbindings", self.debug).run()
+    build_args = ["PREFIX=%(prefix)s", "BUILDDIR=%(build_path)s"]
 
     def destroot(self):
-        args = ["INSTALL_ROOT=" + self.dest_dir + self.prefix, "install"]
-        Make(self.build_path, self.debug).run(args)
+        bin_dir = self.dest_path + "/bin"
+        plugin_dir = self.dest_path + "/lib/qt4/"
+        Mkdirs(bin_dir).run()
+        Mkdirs(plugin_dir).run()
+        Copy(self.build_path + "/plugins", plugin_dir).run()
+        Copy(self.build_path + "/generator/generator",
+             bin_dir + "/qs_generator").run()
+        Copy(self.build_path + "/qtbindings/qs_eval/qs_eval", bin_dir).run()

@@ -1,0 +1,13 @@
+Index: qtscriptgenerator-src-0.2.0/qtbindings/qtbindingsbase.pri
+===================================================================
+--- qtscriptgenerator-src-0.2.0.orig/qtbindings/qtbindingsbase.pri	2012-02-23 10:35:43.000000000 +0100
++++ qtscriptgenerator-src-0.2.0/qtbindings/qtbindingsbase.pri	2012-02-23 11:10:05.000000000 +0100
+@@ -3,7 +3,7 @@
+ INCLUDEPATH += .
+ DESTDIR = ../../plugins/script
+ QT += script
+-CONFIG += debug_and_release
++CONFIG += release
+ GENERATEDCPP = ../../generated_cpp
+ TARGET=$$qtLibraryTarget($$TARGET)
+ QMAKE_LIBS_THREAD =

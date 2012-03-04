@@ -1,0 +1,22 @@
+Description: Include QtWebkit and Phonon unconditionally.
+ This is necessary as both aren't built by the Qt source.
+Author: Felix Geyer <debfx-pkg@fobos.de>
+Acked-By: Modestas Vainius <modax@debian.org>
+Last-Update: 2011-03-20
+
+--- a/generator/qtscript_masterinclude.h
++++ b/generator/qtscript_masterinclude.h
+@@ -53,13 +53,9 @@
+ #  include <QtXmlPatterns/QtXmlPatterns>
+ #endif
+ 
+-#ifndef QT_NO_WEBKIT
+ #  include <QtWebKit/QtWebKit>
+-#endif
+ 
+-#ifndef QT_NO_PHONON
+ #  include <phonon/phonon>
+-#endif
+ 
+ #include "../qtbindings/qtscript_core/qtscriptconcurrent.h"
+ 
