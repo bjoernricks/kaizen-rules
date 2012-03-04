@@ -1,0 +1,14 @@
+Index: apiextractor-0.10.9/CMakeLists.txt
+===================================================================
+--- apiextractor-0.10.9.orig/CMakeLists.txt	2011-11-18 19:10:10.000000000 +0100
++++ apiextractor-0.10.9/CMakeLists.txt	2012-02-25 19:05:01.000000000 +0100
+@@ -134,7 +134,8 @@
+ set_target_properties(apiextractor PROPERTIES VERSION ${apiextractor_VERSION}
+                                               SOVERSION ${apiextractor_SOVERSION}
+                                               OUTPUT_NAME "apiextractor${apiextractor_SUFFIX}"
+-                                              DEFINE_SYMBOL APIEXTRACTOR_EXPORTS)
++                                              DEFINE_SYMBOL APIEXTRACTOR_EXPORTS
++                                              INSTALL_NAME_DIR ${LIB_INSTALL_DIR})
+ 
+ # uninstall target
+ configure_file("${CMAKE_CURRENT_SOURCE_DIR}/cmake_uninstall.cmake" "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake" IMMEDIATE @ONLY)

@@ -1,5 +1,7 @@
 import jam.session
 
+from jam.system import Quilt
+
 class Apiextractor(jam.session.CMakeSession):
 
     url = "http://www.pyside.org/files/%(name)s-%(version)s.tar.bz2"
@@ -9,5 +11,7 @@ class Apiextractor(jam.session.CMakeSession):
     name = "apiextractor"
 
     depends = ["python", "qt4", "libxml2", "libxslt"]
+
+    patchsystem = Quilt
 
     configure_args = ["-DBUILD_TESTS=FALSE"]
