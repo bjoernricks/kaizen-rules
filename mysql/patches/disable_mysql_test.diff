@@ -1,0 +1,13 @@
+Index: mysql-5.5.20/mysql-test/CMakeLists.txt
+===================================================================
+--- mysql-5.5.20.orig/mysql-test/CMakeLists.txt	2011-12-16 20:52:05.000000000 +0100
++++ mysql-5.5.20/mysql-test/CMakeLists.txt	2012-02-23 15:11:30.000000000 +0100
+@@ -29,6 +29,8 @@
+  PATTERN "*.am" EXCLUDE
+  PATTERN "*.in" EXCLUDE
+ )
++ELSE()
++    RETURN()
+ ENDIF()
+ 
+ 
