@@ -1,0 +1,14 @@
+Index: qt-everywhere-opensource-src-4.8.0/configure
+===================================================================
+--- qt-everywhere-opensource-src-4.8.0.orig/configure	2011-12-08 06:06:02.000000000 +0100
++++ qt-everywhere-opensource-src-4.8.0/configure	2012-02-24 12:42:41.000000000 +0100
+@@ -5526,8 +5526,7 @@
+                 SQLITE_AUTODETECT_FAILED="no"
+                 if [ "$CFG_SQLITE" = "system" ]; then
+                     if [ -n "$PKG_CONFIG" ]; then
+-                        QT_CFLAGS_SQLITE=`$PKG_CONFIG --cflags sqlite3 2>/dev/null`
+-                        QT_LFLAGS_SQLITE=`$PKG_CONFIG --libs sqlite3 2>/dev/null`
++                        QT_LFLAGS_SQLITE=-lsqlite3
+                     fi
+                     if "$unixtests/compile.test" "$XQMAKESPEC" "$QMAKE_CONFIG" $OPT_VERBOSE "$relpath" "$outpath" config.tests/unix/sqlite "SQLite" $QT_LFLAGS_SQLITE $L_FLAGS $QT_CFLAGS_SQLITE $I_FLAGS $l_FLAGS $MAC_CONFIG_TEST_COMMANDLINE; then
+                         if [ "$CFG_SQL_sqlite" = "auto" ]; then
