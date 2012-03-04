@@ -12,9 +12,5 @@ class Gitmanpages(jam.session.Session):
     name = "git-manpages"
 
     def destroot(self):
-        Copy(os.path.join(self.src_dir, "man1"),
-             os.path.join(self.destroot_path + self.prefix, "share", "man", "man1")).run()
-        Copy(os.path.join(self.src_dir, "man5"),
-             os.path.join(self.destroot_path + self.prefix, "share", "man", "man5")).run()
-        Copy(os.path.join(self.src_dir, "man7"),
-             os.path.join(self.destroot_path + self.prefix, "share", "man", "man7")).run()
+        Copy(os.path.join(self.src_dir, "man*"),
+             os.path.join(self.dest_path, "share", "man")).run()
