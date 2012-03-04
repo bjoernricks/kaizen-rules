@@ -25,4 +25,8 @@ class QtCreator(jam.session.MakeSession):
 
     def post_destroot(self):
         Copy(os.path.join(self.build_path, "bin", "Qt Creator.app"),
-             os.path.join(self.dest_dir + self.apps_dir, "Qt Creator.app")).run()
+             os.path.join(self.dest_dir + self.apps_dir)).run()
+
+    def distclean(self):
+        # FIXME
+        pass
