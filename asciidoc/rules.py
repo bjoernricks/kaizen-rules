@@ -11,7 +11,7 @@ class Asciidoc(jam.session.ConfigureSession):
     name = "asciidoc"
 
     def pre_configure(self):
-        Copy(self.src_path, self.build_path).run()
+        Copy(self.src_path + "/*", self.build_path).run()
 
     def distclean(self):
         pass
