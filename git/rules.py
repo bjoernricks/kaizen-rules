@@ -19,7 +19,7 @@ class Git(jam.session.ConfigureSession):
                      ]
 
     def pre_configure(self):
-        Copy(self.src_path, self.build_path).run()
+        Copy(self.src_path + "/*", self.build_path).run()
 
     def post_destroot(self):
         Copy(os.path.join(self.build_path, "contrib", "completion",
@@ -29,3 +29,6 @@ class Git(jam.session.ConfigureSession):
         Copy(os.path.join(self.session_path, "contrib", "giteditor"),
              os.path.join(self.dest_path, "share", "git",
                           "contrib", "giteditor")).run()
+
+    def distclean(self):
+        Delete(self.build_path).run()
