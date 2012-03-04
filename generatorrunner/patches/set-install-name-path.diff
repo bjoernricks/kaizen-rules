@@ -1,0 +1,14 @@
+Index: generatorrunner-0.6.15/CMakeLists.txt
+===================================================================
+--- generatorrunner-0.6.15.orig/CMakeLists.txt	2011-11-18 21:38:22.000000000 +0100
++++ generatorrunner-0.6.15/CMakeLists.txt	2012-02-25 18:49:38.000000000 +0100
+@@ -67,7 +67,8 @@
+ target_link_libraries(genrunner ${QT_QTCORE_LIBRARY} ${APIEXTRACTOR_LIBRARY})
+ set_target_properties(genrunner PROPERTIES VERSION ${generator_VERSION}
+                                 SOVERSION ${generator_SOVERSION}
+-                                OUTPUT_NAME genrunner${generator_SUFFIX})
++                                OUTPUT_NAME genrunner${generator_SUFFIX}
++                                INSTALL_NAME_DIR ${LIB_INSTALL_DIR})
+ 
+ add_executable(generatorrunner main.cpp)
+ set_target_properties(generatorrunner PROPERTIES OUTPUT_NAME generatorrunner${generator_SUFFIX})
