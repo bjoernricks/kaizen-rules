@@ -20,7 +20,5 @@ class Docbookxml(jam.session.Session):
 
         dest_path = self.dest_path + "/share/xml/docbook/" + self.version
         Mkdirs(dest_path).run()
-        for item in files:
+        for item in files + dirs:
             Copy(self.src_path + "/" + item, dest_path).run()
-        for dir in dirs:
-            Copy(self.src_path + "/" + dir, dest_path + "/" + dir).run()
