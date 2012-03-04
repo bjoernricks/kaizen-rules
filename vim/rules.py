@@ -23,4 +23,4 @@ class Vim(jam.session.ConfigureSession):
     depends = ["ctags", "cscope", "gettext", "libiconv"]
 
     def pre_configure(self):
-        Copy(self.src_path, self.build_path).run()
+        Copy(self.src_path +"/*", self.build_path).run()
