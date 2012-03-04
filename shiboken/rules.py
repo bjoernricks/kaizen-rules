@@ -1,5 +1,7 @@
 import jam.session
 
+from jam.system import Quilt
+
 class Shiboken(jam.session.CMakeSession):
 
     url = "http://www.pyside.org/files/%(name)s-%(version)s.tar.bz2"
@@ -9,5 +11,7 @@ class Shiboken(jam.session.CMakeSession):
     name = "shiboken"
 
     depends = ["python", "qt4", "apiextractor", "generatorrunner"]
+
+    patchsystem = Quilt
 
     configure_args = ["-DBUILD_TESTS=FALSE"]

@@ -1,0 +1,14 @@
+Index: shiboken-1.0.10/libshiboken/CMakeLists.txt
+===================================================================
+--- shiboken-1.0.10.orig/libshiboken/CMakeLists.txt	2011-11-23 19:34:28.000000000 +0100
++++ shiboken-1.0.10/libshiboken/CMakeLists.txt	2012-02-25 19:11:23.000000000 +0100
+@@ -42,7 +42,8 @@
+ set_target_properties(libshiboken PROPERTIES OUTPUT_NAME "shiboken${shiboken_SUFFIX}${PYTHON_SUFFIX}"
+                                              VERSION ${libshiboken_VERSION}
+                                              SOVERSION ${libshiboken_SOVERSION}
+-                                             DEFINE_SYMBOL LIBSHIBOKEN_EXPORTS)
++                                             DEFINE_SYMBOL LIBSHIBOKEN_EXPORTS
++                                             INSTALL_NAME_DIR ${LIB_INSTALL_DIR})
+ 
+ install(FILES
+         autodecref.h
