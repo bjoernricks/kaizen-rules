@@ -15,7 +15,7 @@ class Kdelibs(jam.session.CMakeSession):
 
     configure_args = ["-DWITH_ENCHANT=ON",
                       "-DWITH_Soprano=ON",
-                      "-DKDE_DEFAULT_HOME=Library/Preferences/KDE"
+                      "-DKDE_DEFAULT_HOME=Library/Preferences/KDE",
                       "-DWITH_HSPELL=OFF",
                       "-DWITH_FAM=OFF",
                       "-DBUNDLE_INSTALL_DIR=%(apps_dir)s/KDE4",
