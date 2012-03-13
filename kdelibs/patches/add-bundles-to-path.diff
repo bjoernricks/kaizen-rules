@@ -1,0 +1,27 @@
+Index: kdelibs-4.8.0/kdecore/CMakeLists.txt
+===================================================================
+--- kdelibs-4.8.0.orig/kdecore/CMakeLists.txt	2011-08-22 15:13:55.000000000 +0200
++++ kdelibs-4.8.0/kdecore/CMakeLists.txt	2012-03-09 21:05:05.000000000 +0100
+@@ -98,6 +98,7 @@
+ endif (HAVE_RESOLV_LIBRARY)
+ 
+ if (APPLE)
++   add_definitions(-DBUNDLE_INSTALL_DIR="\\"${BUNDLE_INSTALL_DIR}\\"")
+    set(kdecore_OPTIONAL_SRCS ${kdecore_OPTIONAL_SRCS}
+       kernel/kkernel_mac.cpp
+       localization/klocale_mac.cpp
+Index: kdelibs-4.8.0/kdecore/kernel/kstandarddirs.cpp
+===================================================================
+--- kdelibs-4.8.0.orig/kdecore/kernel/kstandarddirs.cpp	2012-01-10 15:17:51.000000000 +0100
++++ kdelibs-4.8.0/kdecore/kernel/kstandarddirs.cpp	2012-03-09 21:05:05.000000000 +0100
+@@ -1268,6 +1268,10 @@
+         exePaths << KShell::tildeExpand( tokens[ i ] );
+     }
+ 
++#ifdef Q_WS_MAC
++    exePaths << QString::fromLatin1(BUNDLE_INSTALL_DIR);
++#endif
++
+     return exePaths;
+ }
+ 

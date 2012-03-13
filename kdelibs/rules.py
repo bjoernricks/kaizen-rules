@@ -1,5 +1,6 @@
 import jam.session
 
+from jam.system import Quilt
 from jam.session.groups import KDE
 
 class Kdelibs(jam.session.CMakeSession):
@@ -11,6 +12,8 @@ class Kdelibs(jam.session.CMakeSession):
     name = "kdelibs"
 
     groups = [KDE]
+
+    patchsystem = Quilt
 
     depends = ["qt4", "perl", "zlib", "strigi", "attica", "openssl",
                "soprano", "shared-desktop-ontologies", "dbus", "libdbusmenu-qt",
