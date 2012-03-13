@@ -9,3 +9,6 @@ class Kderuntime(jam.session.CMakeSession):
     name = "kde-runtime"
 
     depends = ["kdelibs", "oxygen-icons"]
+
+    configure_args = ["-DBUNDLE_INSTALL_DIR=%(apps_dir)s/KDE4",
+                     ]
