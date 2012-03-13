@@ -1,5 +1,7 @@
 import jam.session
 
+from jam.session.groups import KDE
+
 class Kdelibs(jam.session.CMakeSession):
 
     url = "ftp://ftp.kde.org/pub/kde/stable/%(version)s/src/kdelibs-%(version)s.tar.bz2"
@@ -7,6 +9,8 @@ class Kdelibs(jam.session.CMakeSession):
              "sha1" : "5e4744405734e6c3ce572ef7d16054390692b38a" }
     version = "4.8.0"
     name = "kdelibs"
+
+    groups = [KDE]
 
     depends = ["qt4", "perl", "zlib", "strigi", "attica", "openssl",
                "soprano", "shared-desktop-ontologies", "dbus", "libdbusmenu-qt",
