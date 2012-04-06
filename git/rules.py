@@ -6,9 +6,9 @@ from jam.system import Copy, Configure
 class Git(jam.session.ConfigureSession):
 
     url =  "http://git-core.googlecode.com/files/git-%(version)s.tar.gz"
-    hash = { "md5" : "e0b7afcc0e5e43bbb82f85598ae34bd8",
-             "sha1" : "df91e2c32d6097ab1c9d0edc56dd8cecb4e9b686" }
-    version = "1.7.6.4"
+    hash = { "md5" : "9abd782299d897b416811c81ad78740b",
+             "sha1" : "71c5a5acdef77cd8d29a4ae5d4fe7f2889f495b5" }
+    version = "1.7.9.6"
     name = "git"
 
     depends = ["python", "gettext", "git-manpages"]
