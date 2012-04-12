@@ -6,9 +6,9 @@ from jam.system import Command, Make, Copy, Quilt, Mkdirs, Move
 class Qt4(jam.session.ConfigureSession):
 
     url = "http://get.qt.nokia.com/qt/source/qt-everywhere-opensource-src-%(version)s.tar.gz"
-    hash = { "md5" : "e8a5fdbeba2927c948d9f477a6abe904",
-             "sha1" : "2ba35adca8fb9c66a58eca61a15b21df6213f22e" }
-    version = "4.8.0"
+    hash = { "md5" : "7960ba8e18ca31f0c6e4895a312f92ff",
+             "sha1" : "a074d0f605f009e23c63e0a4cb9b71c978146ffc" }
+    version = "4.8.1"
     name = "qt4"
 
     patchsystem = Quilt
