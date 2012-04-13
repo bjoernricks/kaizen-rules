@@ -2,8 +2,8 @@ import jam.session
 
 class Pythondistribute(jam.session.PythonSession):
 
-    url = "http://pypi.python.org/packages/source/d/distribute/distribute-0.6.21.tar.gz"
-    hash = { "md5" : "c8cfcfd42ec9ab900fb3960a3308eef2",
-             "sha1" : "4bc3df524ba1d684ba997caab3346040551a3820" }
-    version = "0.6.21"
+    url = "http://pypi.python.org/packages/source/d/distribute/distribute-%(version)s.tar.gz"
+    hash = { "md5" : "17722b22141aba8235787f79800cc452",
+             "sha1" : "0670bdbba2be6892f67a6f946259776fa8331525" }
+    version = "0.6.24"
     name = "distribute"
