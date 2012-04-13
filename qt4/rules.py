@@ -41,11 +41,7 @@ class Qt4(jam.session.ConfigureSession):
                       "-dbus-linked",
                       "-fast",
                       "-optimized-qmake",
-                      "-no-framework",
-                      "-cocoa",
                       "-prefix %(prefix)s",
-                      "-L/usr/X11/lib",
-                      "-I/usr/X11/include",
                       "-system-libpng",
                       "-system-zlib",
                       "-system-sqlite",
@@ -74,8 +70,3 @@ class Qt4(jam.session.ConfigureSession):
     def destroot(self):
         args = ["INSTALL_ROOT=" + self.dest_dir, "install"]
         make = Make(self.build_path, self.debug).run(args)
-        Copy(os.path.join(self.src_path, "src", "gui", "mac", "qt_menu.nib"),
-             os.path.join(self.dest_path, "lib", "Resources")).run()
-        Mkdirs(self.apps_dir).run()
-        Move(self.dest_path + "/bin/*.app",
-             self.destroot_path + self.apps_dir).run()
