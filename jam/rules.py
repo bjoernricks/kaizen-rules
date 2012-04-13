@@ -1,6 +1,6 @@
 import jam.session
 
-from jam.system import Copy, Mkdirs
+from jam.system import Copy, Mkdirs, NoneFile
 
 class Jam(jam.session.PythonDevelopSession):
 
@@ -10,6 +10,8 @@ class Jam(jam.session.PythonDevelopSession):
     name = "jam"
 
     runtime_depends = ["python-bz2file"]
+
+    extract = NoneFile
 
     def post_destroot(self):
         dest_path = self.dest_path + "/bin"
