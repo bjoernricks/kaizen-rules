@@ -6,12 +6,13 @@ from jam.system import Copy, Configure
 class Git(jam.session.ConfigureSession):
 
     url =  "http://git-core.googlecode.com/files/git-%(version)s.tar.gz"
-    hash = { "md5" : "9abd782299d897b416811c81ad78740b",
-             "sha1" : "71c5a5acdef77cd8d29a4ae5d4fe7f2889f495b5" }
-    version = "1.7.9.6"
+    hash = { "md5" : "ab2716db51580037c7ebda4c8e9d56eb",
+             "sha1" : "501ee8685c148d377950e42c111e01d83fd1d41a" }
+    version = "1.7.10"
     name = "git"
 
-    depends = ["python", "gettext", "git-manpages"]
+    depends = ["python", "gettext", "git-manpages", "perl", "openssl",
+               "libcurl", "zlib", "libexpat"]
 
     configure_args = [
                       "--with-gitconfig=etc/gitconfig",
