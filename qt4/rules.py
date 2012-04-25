@@ -1,7 +1,7 @@
 import os.path
 import jam.session
 
-from jam.system import Command, Make, Copy, Quilt, Mkdirs, Move
+from jam.system import Command, Make, Copy, Quilt, Mkdirs, Move, Delete
 
 class Qt4(jam.session.ConfigureSession):
 
@@ -79,3 +79,6 @@ class Qt4(jam.session.ConfigureSession):
         Mkdirs(self.apps_dir).run()
         Move(self.dest_path + "/bin/*.app",
              self.destroot_path + self.apps_dir).run()
+
+    def distclean(self):
+        Delete(self.build_path).run()
