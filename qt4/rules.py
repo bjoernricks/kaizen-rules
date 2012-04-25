@@ -1,7 +1,7 @@
 import os.path
 import jam.session
 
-from jam.system import Command, Make, Copy, Quilt, Mkdirs, Move
+from jam.system import Command, Make, Copy, Quilt, Mkdirs, Move, Delete
 
 class Qt4(jam.session.ConfigureSession):
 
@@ -70,3 +70,6 @@ class Qt4(jam.session.ConfigureSession):
     def destroot(self):
         args = ["INSTALL_ROOT=" + self.dest_dir, "install"]
         make = Make(self.build_path, self.debug).run(args)
+
+    def distclean(self):
+        Delete(self.build_path).run()

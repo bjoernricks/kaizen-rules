@@ -2,8 +2,15 @@ import jam.session
 
 class Pythonpylons(jam.session.PythonSession):
 
-    url = "http://pypi.python.org/packages/source/P/Pylons/Pylons-1.0.tar.gz"
-    hash = { "md5" : "b7687e26d0275eaf7bf44ca4883f4428",
-             "sha1" : "a624fc3c4ef3ab382a23f460b030e331c4320ca0" }
-    version = "1.0"
+    url = "http://pypi.python.org/packages/source/P/Pylons/Pylons-%(version)s.tar.gz"
+    hash = { "md5" : "93ae0bf3d33fffc35f8ab16a749b3630",
+             "sha1" : "5c30594aae78fe0cce5132a94412923becd7f377" }
+    version = "0.10"
     name = "Pylons"
+
+    depends = ["python-babel", "python-routes", "python-webhelpers",
+               "python-beaker", "python-paste", "python-pastedeploy",
+               "python-pastescript", "python-formencode", "python-simplejson",
+               "python-decorator", "python-nose", "python-mako",
+               "python-webob", "python-weberror", "python-webtest",
+               "python-tempita"]

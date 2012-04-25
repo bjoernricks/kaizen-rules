@@ -9,7 +9,9 @@ class Jam(jam.session.PythonDevelopSession):
     version = "0.1"
     name = "jam"
 
-    runtime_depends = ["python-bz2file"]
+    # depend on python-bz2file for multiprocess .bz2 archives and
+    # depend on python-pyliblzma for lzma compresses .xz archives.
+    runtime_depends = ["python-bz2file", "python-pyliblzma"]
 
     extract = NoneFile
 
