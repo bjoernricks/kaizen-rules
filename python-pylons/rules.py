@@ -13,4 +13,4 @@ class Pythonpylons(jam.session.PythonSession):
                "python-pastescript", "python-formencode", "python-simplejson",
                "python-decorator", "python-nose", "python-mako",
                "python-webob", "python-weberror", "python-webtest",
-               "python-tempita"]
+               "python-tempita", "python-pygments"]
