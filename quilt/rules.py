@@ -1,22 +1,23 @@
-from jam.session import ConfigureSession
-from jam.system import Make
+from kaizen.rules import ConfigureRules
+from kaizen.system import Make
 
-class Quilt(ConfigureSession):
+class Quilt(ConfigureRules):
 
-    url = "http://download.savannah.gnu.org/releases/quilt/quilt-0.48.tar.gz"
-    hash = { "md5" : "f77adda60039ffa753f3c584a286f12b" }
-    version = "0.48"
+    url = "http://download.savannah.gnu.org/releases/quilt/quilt-%(version)s.tar.gz"
+    hash = { "md5" : "058a08a9b626bdec9ec8c519dc92158c",
+             "sha1" : "c93c79598c55ba288f60babcc74a9fc9b04404b6" }
+    version = "0.60"
     name = "quilt"
 
     depends = ["gnu-sed"]
-    
+
     build_path = "%(src_path)s"
-    
+
     configure_args = ["--with-sed=%(prefix)s/bin/gsed",
                       "--without-getopt",
                       "--without-rpmbuild"]
 
     def destroot(self):
-        Make(self.build_path, self.config.get("debug")).run(["BUILD_ROOT=" 
+        Make(self.build_path, self.config.get("debug")).run(["BUILD_ROOT="
              + self.dest_dir, "install"])
 
