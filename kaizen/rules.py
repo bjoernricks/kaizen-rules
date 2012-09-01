@@ -2,7 +2,7 @@ import kaizen.rules
 
 from kaizen.system import Copy, Mkdirs, NoneFile
 
-class Jam(kaizen.rules.PythonDevelopRules):
+class Kaizen(kaizen.rules.PythonDevelopRules):
 
     src_path = "%(package_path)s"
     build_path = "%(package_path)s"
