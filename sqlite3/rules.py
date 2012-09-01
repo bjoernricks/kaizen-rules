@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Sqlite3(jam.session.ConfigureSession):
+class Sqlite3(kaizen.rules.ConfigureRules):
 
     url = "http://www.sqlite.org/sqlite-autoconf-3070701.tar.gz"
     hash = { "md5" : "554026fe7fac47b1cf61c18d5fe43419",

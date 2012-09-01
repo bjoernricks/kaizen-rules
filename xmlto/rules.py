@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Xmlto(jam.session.ConfigureSession):
+class Xmlto(kaizen.rules.ConfigureRules):
 
     url = "https://fedorahosted.org/releases/x/m/xmlto/xmlto-%(version)s.tar.bz2"
     hash = { "md5" : "6b6267b1470f8571fe5f63a128970364",

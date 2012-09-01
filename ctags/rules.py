@@ -1,9 +1,9 @@
 import os.path
-import jam.session
+import kaizen.rules
 
-from jam.system import Copy
+from kaizen.system import Copy
 
-class Ctags(jam.session.ConfigureSession):
+class Ctags(kaizen.rules.ConfigureRules):
 
     url = "http://prdownloads.sourceforge.net/ctags/ctags-5.8.tar.gz"
     hash = { "md5" : "c00f82ecdcc357434731913e5b48630d",

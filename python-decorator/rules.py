@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pythondecorator(jam.session.PythonSession):
+class Pythondecorator(kaizen.rules.PythonRules):
 
     url = "http://pypi.python.org/packages/source/d/decorator/decorator-3.3.2.tar.gz"
     hash = { "md5" : "446f5165af67eb0fcd8fd28abd259e86",

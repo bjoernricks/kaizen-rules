@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pythonvirtualenv(jam.session.PythonSession):
+class Pythonvirtualenv(kaizen.rules.PythonRules):
 
     url = "http://pypi.python.org/packages/source/v/virtualenv/virtualenv-1.6.4.tar.gz"
     hash = { "md5" : "1072b66d53c24e019a8f1304ac9d9fc5",

@@ -1,9 +1,9 @@
 import os.path
 
-import jam.session
-from jam.system import Replace
+import kaizen.rules
+from kaizen.system import Replace
 
-class BashCompletion(jam.session.ConfigureSession):
+class BashCompletion(kaizen.rules.ConfigureRules):
 
     url = "http://bash-completion.alioth.debian.org/files/bash-completion-1.3.tar.bz2"
     hash = { "md5" : "a1262659b4bbf44dc9e59d034de505ec",

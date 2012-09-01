@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pythonpastedeploy(jam.session.PythonSession):
+class Pythonpastedeploy(kaizen.rules.PythonRules):
 
     url = "http://pypi.python.org/packages/source/P/PasteDeploy/PasteDeploy-1.5.0.tar.gz"
     hash = { "md5" : "f1a068a0b680493b6eaff3dd7690690f",

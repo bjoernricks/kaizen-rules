@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Strigi(jam.session.CMakeSession):
+class Strigi(kaizen.rules.CMakeRules):
 
     url = "http://www.vandenoever.info/software/strigi/strigi-%(version)s.tar.bz2"
     hash = { "md5" : "0559e2ab65d187d30916e9ffe36e0fb6",

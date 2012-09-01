@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pythonnose(jam.session.PythonSession):
+class Pythonnose(kaizen.rules.PythonRules):
 
     url = "http://pypi.python.org/packages/source/n/nose/nose-1.1.2.tar.gz"
     hash = { "md5" : "144f237b615e23f21f6a50b2183aa817",

@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pythonpygments(jam.session.PythonSession):
+class Pythonpygments(kaizen.rules.PythonRules):
 
     url = "http://pypi.python.org/packages/source/P/Pygments/%(name)s-%(version)s.tar.gz"
     hash = { "md5" : "ef997066cc9ee7a47d01fb4f3da0b5ff",

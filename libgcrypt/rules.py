@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Libgcrypt(jam.session.ConfigureSession):
+class Libgcrypt(kaizen.rules.ConfigureRules):
 
     url = "ftp://ftp.gnupg.org/gcrypt/libgcrypt/libgcrypt-1.5.0.tar.bz2"
     hash = { "md5" : "693f9c64d50c908bc4d6e01da3ff76d8",

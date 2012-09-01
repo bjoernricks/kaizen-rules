@@ -1,8 +1,8 @@
-import jam.session
+import kaizen.rules
 
-from jam.system import Quilt
+from kaizen.system import Quilt
 
-class Generatorrunner(jam.session.CMakeSession):
+class Generatorrunner(kaizen.rules.CMakeRules):
 
     url = "http://www.pyside.org/files/%(name)s-%(version)s.tar.bz2"
     hash = { "md5" : "88425f176ffc3810307edabc381415c6",

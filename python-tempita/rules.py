@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pythontempita(jam.session.PythonSession):
+class Pythontempita(kaizen.rules.PythonRules):
 
     url = "http://pypi.python.org/packages/source/T/Tempita/Tempita-0.4.tar.gz"
     hash = { "md5" : "0abe015a72e748d0c6284679a497426c",
@@ -8,7 +8,7 @@ class Pythontempita(jam.session.PythonSession):
     version = "0.4"
     name = "Tempita"
 
-    # jam.session.PythonSession already depends on python
+    # kaizen.rules.PythonRules already depends on python
     # depends = ["python"]
 
     # uncomment to set path to source directory

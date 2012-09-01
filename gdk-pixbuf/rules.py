@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Gdkpixbuf(jam.session.ConfigureSession):
+class Gdkpixbuf(kaizen.rules.ConfigureRules):
 
     url = "http://ftp.gnome.org/pub/gnome/sources/gdk-pixbuf/2.24/gdk-pixbuf-%(version)s.tar.bz2"
     hash = { "md5" : "d8ece3a4ade4a91c768328620e473ab8",

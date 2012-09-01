@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Kdepimruntime(jam.session.CMakeSession):
+class Kdepimruntime(kaizen.rules.CMakeRules):
 
     url = "ftp://ftp.kde.org/pub/kde/stable/%(version)s/src/kdepim-runtime-%(version)s.tar.bz2"
     hash = { "md5" : "8f941417152fd2ae9e5130cf0426a95e",
@@ -15,6 +15,6 @@ class Kdepimruntime(jam.session.CMakeSession):
 
     configure_args = [
                       "-DBUNDLE_INSTALL_DIR=%(apps_dir)s/KDE4",
-                      "-DKDE_DISTRIBUTION_TEXT=\"jam software manager\"",
+                      "-DKDE_DISTRIBUTION_TEXT=\"kaizen software manager\"",
                       "-DCMAKE_BUILD_TYPE=Release",
                       ]

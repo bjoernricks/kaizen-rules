@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Oxygengtk(jam.session.CMakeSession):
+class Oxygengtk(kaizen.rules.CMakeRules):
 
     url = "http://ftp.gwdg.de/pub/x11/kde/stable/oxygen-gtk/1.1.3/src/oxygen-gtk-%(version)s.tar.bz2"
     hash = { "md5" : "e3b280a61cbe4363c41c26083e94643d",

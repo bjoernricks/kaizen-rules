@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pythonbeaker(jam.session.PythonSession):
+class Pythonbeaker(kaizen.rules.PythonRules):
 
     url = "http://pypi.python.org/packages/source/B/Beaker/Beaker-1.6.2.tar.gz"
     hash = { "md5" : "455a264cb481ab07446f020c001dcdc5",
@@ -8,7 +8,7 @@ class Pythonbeaker(jam.session.PythonSession):
     version = "1.6.2"
     name = "Beaker"
 
-    # jam.session.PythonSession already depends on python
+    # kaizen.rules.PythonRules already depends on python
     # depends = ["python"]
 
     # uncomment to set path to source directory

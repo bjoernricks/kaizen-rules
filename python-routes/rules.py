@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pythonroutes(jam.session.PythonSession):
+class Pythonroutes(kaizen.rules.PythonRules):
 
     url = "http://pypi.python.org/packages/source/R/Routes/%(name)s-%(version)s.tar.gz"
     hash = { "md5" : "9740ff424ff6b841632c784a38fb2be3",

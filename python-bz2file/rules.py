@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pythonbz2file(jam.session.PythonSession):
+class Pythonbz2file(kaizen.rules.PythonRules):
 
     url = "http://pypi.python.org/packages/source/b/bz2file/bz2file-%(version)s.tar.gz"
     hash = { "md5" : "e3e7021e373228422d32f15bd01d065e",

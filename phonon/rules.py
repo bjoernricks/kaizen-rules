@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Phonon(jam.session.CMakeSession):
+class Phonon(kaizen.rules.CMakeRules):
 
     url = "phonon-4.6.0.tar.bz2"
     hash = { "md5" : "7b194cc3a5583c958f81bb41e0f044cb",

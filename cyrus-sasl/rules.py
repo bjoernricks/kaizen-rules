@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Cyrussasl(jam.session.ConfigureSession):
+class Cyrussasl(kaizen.rules.ConfigureRules):
 
     url = "ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/cyrus-sasl-2.1.25.tar.gz"
     hash = { "md5" : "341cffe829a4d71f2a6503d669d5a946",

@@ -1,11 +1,11 @@
-import jam.session
-import jam.run
+import kaizen.rules
+import kaizen.run
 
-from jam.system import Replace, Copy, Command, Delete
+from kaizen.system import Replace, Copy, Command, Delete
 
-class Glib(jam.session.ConfigureSession):
+class Glib(kaizen.rules.ConfigureRules):
 
-    url = "ftp://ftp.gnome.org/pub/gnome/sources/glib/2.30/glib-2.30.2.tar.bz2"
+    url = "ftp://ftp.gnome.org/pub/gnome/sources/glib/2.30/glib-%(version)s.tar.bz2"
     hash = { "md5" : "b40f3889e8d24e1b367763673ca6deb5",
              "sha1" : "70208757905037fa1f8b89797db0097c5e82a140" }
     version = "2.30.2"
@@ -36,8 +36,8 @@ class Glib(jam.session.ConfigureSession):
     def post_configure(self):
         cmd = ["ed", "-", self.build_path + "/config.h"]
         self.log.debug("Running ed on %s" % self.buld_path + "/config.h")
-        jam.run.call(cmd, not self.verbose, cwd=self.build_path, 
-                     inputdata=self.session_path + "/config.h.ed")
+        kaizen.run.call(cmd, not self.verbose, cwd=self.build_path,
+                     inputdata=self.rules_path + "/config.h.ed")
 
     def distclean(self):
         Delete(self.build_path).run()

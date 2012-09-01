@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Gnupg(jam.session.ConfigureSession):
+class Gnupg(kaizen.rules.ConfigureRules):
 
     url = "ftp://ftp.gnupg.org/gcrypt/gnupg/gnupg-2.0.18.tar.bz2"
     hash = { "md5" : "2f37e0722666a0fedbe4d9f9227ac4d7",

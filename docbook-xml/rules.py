@@ -1,8 +1,8 @@
-import jam.session
+import kaizen.rules
 
-from jam.system import Copy, Mkdirs
+from kaizen.system import Copy, Mkdirs
 
-class Docbookxml(jam.session.Session):
+class Docbookxml(kaizen.rules.Rules):
 
     url = "http://www.oasis-open.org/docbook/xml/4.2/docbook-xml-4.2.zip"
     hash = { "md5" : "73fe50dfe74ca631c1602f558ed8961f",

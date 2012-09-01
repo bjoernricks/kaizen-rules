@@ -1,9 +1,9 @@
 import os.path
-import jam.session
+import kaizen.rules
 
-from jam.system import Command, Make, Copy
+from kaizen.system import Command, Make, Copy
 
-class QtCreator(jam.session.MakeSession):
+class QtCreator(kaizen.rules.MakeRules):
 
     url = "http://get.qt.nokia.com/qtcreator/qt-creator-%(version)s-src.tar.gz"
     hash = { "md5" : "80c1a2be4c685ce147c42424ad977e1a",

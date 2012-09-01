@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Libdaemon(jam.session.ConfigureSession):
+class Libdaemon(kaizen.rules.ConfigureRules):
 
     url = "http://0pointer.de/lennart/projects/libdaemon/libdaemon-%(version)s.tar.gz"
     hash = { "md5" : "509dc27107c21bcd9fbf2f95f5669563",

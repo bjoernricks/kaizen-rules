@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Gdbm(jam.session.ConfigureSession):
+class Gdbm(kaizen.rules.ConfigureRules):
 
     url = "ftp://ftp.gnu.org/gnu/gdbm/gdbm-%(version)s.tar.gz"
     hash = { "md5" : "88770493c2559dc80b561293e39d3570",

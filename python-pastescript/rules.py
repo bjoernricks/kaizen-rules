@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pythonpastescript(jam.session.PythonSession):
+class Pythonpastescript(kaizen.rules.PythonRules):
 
     url = "http://pypi.python.org/packages/source/P/PasteScript/%(name)s-%(version)s.tar.gz"
     hash = { "md5" : "e08017f60f4ff9067d2b88d3c2a49717",

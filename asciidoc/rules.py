@@ -1,8 +1,8 @@
-import jam.session
+import kaizen.rules
 
-from jam.system import Copy
+from kaizen.system import Copy
 
-class Asciidoc(jam.session.ConfigureSession):
+class Asciidoc(kaizen.rules.ConfigureRules):
 
     url = "http://downloads.sourceforge.net/project/asciidoc/asciidoc/%(version)s/asciidoc-%(version)s.tar.gz"
     hash = { "md5" : "44b872d9c300ffa5a8fe8b3c4d10957c",

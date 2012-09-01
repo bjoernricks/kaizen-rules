@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pythondistribute(jam.session.PythonSession):
+class Pythondistribute(kaizen.rules.PythonRules):
 
     url = "http://pypi.python.org/packages/source/d/distribute/distribute-%(version)s.tar.gz"
     hash = { "md5" : "17722b22141aba8235787f79800cc452",

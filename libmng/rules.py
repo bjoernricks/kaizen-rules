@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Libmng(jam.session.Session):
+class Libmng(kaizen.rules.Rules):
 
     url = "http://downloads.sourceforge.net/project/libmng/libmng-devel/1.0.10/libmng-1.0.10.tar.gz"
     hash = { "md5" : "a464ae7d679781beebdf7440d144b7bd",

@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pythonlxml(jam.session.PythonSession):
+class Pythonlxml(kaizen.rules.PythonRules):
 
     url = "http://lxml.de/files/lxml-2.3.tgz"
     hash = { "md5" : "a245a015fd59b63e220005f263e1682a",

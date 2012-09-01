@@ -1,8 +1,8 @@
-import jam.session
+import kaizen.rules
 
-from jam.system import Copy
+from kaizen.system import Copy
 
-class Vim(jam.session.ConfigureSession):
+class Vim(kaizen.rules.ConfigureRules):
 
     url = "http://ftp.vim.org/pub/vim/unix/vim-7.3.tar.bz2"
     hash = { "md5" : "5b9510a17074e2b37d8bb38ae09edbf2",

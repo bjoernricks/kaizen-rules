@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Libmtp(jam.session.ConfigureSession):
+class Libmtp(kaizen.rules.ConfigureRules):
 
     url = "http://downloads.sourceforge.net/project/libmtp/libmtp/%(version)s/libmtp-%(version)s.tar.gz"
     hash = { "md5" : "6dc708757e3fd3ccce7445b4f2171263",

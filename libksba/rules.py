@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Libksba(jam.session.ConfigureSession):
+class Libksba(kaizen.rules.ConfigureRules):
 
     url = "ftp://ftp.gnupg.org/gcrypt/libksba/libksba-1.2.0.tar.bz2"
     hash = { "md5" : "e797f370b69b4dc776499d6a071ae137",

@@ -1,9 +1,9 @@
 import os.path
-import jam.session
+import kaizen.rules
 
-from jam.system import Move
+from kaizen.system import Move
 
-class Dbus(jam.session.ConfigureSession):
+class Dbus(kaizen.rules.ConfigureRules):
 
     url = "http://dbus.freedesktop.org/releases/dbus/dbus-%(version)s.tar.gz"
     hash = { "md5" : "44a2a10678e7e50460879c3eb4453a65",

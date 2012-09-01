@@ -1,8 +1,8 @@
-import jam.session
+import kaizen.rules
 
-from jam.system import Quilt
+from kaizen.system import Quilt
 
-class Mysql(jam.session.CMakeSession):
+class Mysql(kaizen.rules.CMakeRules):
 
     url = "http://downloads.mysql.com/archives/mysql-5.5/mysql-%(version)s.tar.gz"
     hash = { "md5" : "375794ebf84b4c7b63f1676bc7416cd0",

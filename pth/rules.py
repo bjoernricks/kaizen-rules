@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pth(jam.session.ConfigureSession):
+class Pth(kaizen.rules.ConfigureRules):
 
     url = "ftp://ftp.gnu.org/gnu/pth/pth-2.0.7.tar.gz"
     hash = { "md5" : "9cb4a25331a4c4db866a31cbe507c793",

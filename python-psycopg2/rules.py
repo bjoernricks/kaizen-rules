@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pythonpsycopg2(jam.session.PythonSession):
+class Pythonpsycopg2(kaizen.rules.PythonRules):
 
     url = "http://pypi.python.org/packages/source/p/psycopg2/psycopg2-%(version)s.tar.gz"
     hash = { "md5" : "639e014ea9ce3aa3306724f12d16d79b",

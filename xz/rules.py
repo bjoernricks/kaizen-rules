@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Xz(jam.session.ConfigureSession):
+class Xz(kaizen.rules.ConfigureRules):
 
     url = "http://tukaani.org/xz/xz-5.0.3.tar.bz2"
     hash = { "md5" : "8d900b742b94fa9e708ca4f5a4b29003",

@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pythonpylons(jam.session.PythonSession):
+class Pythonpylons(kaizen.rules.PythonRules):
 
     url = "http://pypi.python.org/packages/source/P/Pylons/Pylons-%(version)s.tar.gz"
     hash = { "md5" : "93ae0bf3d33fffc35f8ab16a749b3630",

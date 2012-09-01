@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pythondulwich(jam.session.PythonSession):
+class Pythondulwich(kaizen.rules.PythonRules):
 
     url = "http://www.samba.org/~jelmer/dulwich/dulwich-%(version)s.tar.gz"
     hash = { "md5" : "544724f9ac9fe6f9865526917ad284d9",

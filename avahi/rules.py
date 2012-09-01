@@ -1,8 +1,8 @@
-import jam.session
+import kaizen.rules
 
-from jam.system import Move
+from kaizen.system import Move
 
-class Avahi(jam.session.ConfigureSession):
+class Avahi(kaizen.rules.ConfigureRules):
 
     url = "http://avahi.org/download/avahi-%(version)s.tar.gz"
     hash = { "md5" : "2f22745b8f7368ad5a0a3fddac343f2d",

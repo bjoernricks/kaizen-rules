@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Clucenecore(jam.session.CMakeSession):
+class Clucenecore(kaizen.rules.CMakeRules):
 
     url = "http://downloads.sourceforge.net/project/clucene/clucene-core-stable/%(version)s/clucene-core-%(version)s.tar.bz2"
     hash = { "md5" : "ba1a8f764a2ca19c66ad907dddd88352",

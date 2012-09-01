@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Gettext(jam.session.ConfigureSession):
+class Gettext(kaizen.rules.ConfigureRules):
 
     url = "http://ftp.gnu.org/pub/gnu/gettext/gettext-%(version)s.tar.gz"
     hash = { "md5" : "3dd55b952826d2b32f51308f2f91aa89",

@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Raptor2(jam.session.ConfigureSession):
+class Raptor2(kaizen.rules.ConfigureRules):
 
     url = "http://download.librdf.org/source/raptor2-%(version)s.tar.gz"
     hash = { "md5" : "1f07af81cbe3cf1bf0d1d250b18d9f93",

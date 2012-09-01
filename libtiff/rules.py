@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Tiff(jam.session.ConfigureSession):
+class Tiff(kaizen.rules.ConfigureRules):
 
     url = "http://download.osgeo.org/libtiff/tiff-%(version)s.tar.gz"
     hash = { "md5" : "8fc7ce3b4e1d0cc8a319336967815084",

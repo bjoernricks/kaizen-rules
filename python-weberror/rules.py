@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pythonweberror(jam.session.PythonSession):
+class Pythonweberror(kaizen.rules.PythonRules):
 
     url = "http://pypi.python.org/packages/source/W/WebError/WebError-0.10.3.tar.gz"
     hash = { "md5" : "84b9990b0baae6fd440b1e60cdd06f9a",

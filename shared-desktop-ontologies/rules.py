@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Shareddesktopontologies(jam.session.CMakeSession):
+class Shareddesktopontologies(kaizen.rules.CMakeRules):
 
     url = "http://downloads.sourceforge.net/project/oscaf/shared-desktop-ontologies/0.9/shared-desktop-ontologies-%(version)s.tar.bz2"
     hash = { "md5" : "8cd0950dc66eb5fbe560ac7fdb416e04",

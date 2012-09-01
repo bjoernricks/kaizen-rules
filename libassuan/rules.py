@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Libassuan(jam.session.ConfigureSession):
+class Libassuan(kaizen.rules.ConfigureRules):
 
     url = "ftp://ftp.gnupg.org/gcrypt/libassuan/libassuan-2.0.3.tar.bz2"
     hash = { "md5" : "179d1918325fdb928c7bd90b8a514fc7",

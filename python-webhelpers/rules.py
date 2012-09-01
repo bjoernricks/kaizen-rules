@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pythonwebhelpers(jam.session.PythonSession):
+class Pythonwebhelpers(kaizen.rules.PythonRules):
 
     url = "http://pypi.python.org/packages/source/W/WebHelpers/WebHelpers-1.3.tar.gz"
     hash = { "md5" : "32749ffadfc40fea51075a7def32588b",

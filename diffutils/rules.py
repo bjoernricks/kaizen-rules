@@ -1,9 +1,9 @@
 import os.path
 
-import jam.session
-from jam.system import Delete
+import kaizen.rules
+from kaizen.system import Delete
 
-class Diffutils(jam.session.ConfigureSession):
+class Diffutils(kaizen.rules.ConfigureRules):
 
     url = "http://ftp.gnu.org/gnu/diffutils/diffutils-3.0.tar.gz"
     hash = { "md5" : "684aaba1baab743a2a90e52162ff07da",

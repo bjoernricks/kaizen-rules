@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pythonmako(jam.session.PythonSession):
+class Pythonmako(kaizen.rules.PythonRules):
 
     url = "http://www.makotemplates.org/downloads/Mako-%(version)s.tar.gz"
     hash = { "md5" : "532d7aa7ffbfd2873c1461a30431366a",

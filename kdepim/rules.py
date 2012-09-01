@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Kdepim(jam.session.CMakeSession):
+class Kdepim(kaizen.rules.CMakeRules):
 
     url = "ftp://ftp.kde.org/pub/kde/stable/4.8.0/src/kdepim-4.8.0.tar.bz2"
     hash = { "md5" : "502216fe546ee87b7bb66f2da5599417",

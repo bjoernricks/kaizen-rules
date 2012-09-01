@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Taglibextras(jam.session.CMakeSession):
+class Taglibextras(kaizen.rules.CMakeRules):
 
     url = "http://www.kollide.net/~jefferai/taglib-extras-%(version)s.tar.gz"
     hash = { "md5" : "e973ca609b18e2c03c147ff9fd9e6eb8",

@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Intltool(jam.session.ConfigureSession):
+class Intltool(kaizen.rules.ConfigureRules):
 
     url = "http://launchpad.net/intltool/trunk/0.50.1/+download/intltool-%(version)s.tar.gz"
     hash = { "md5" : "892f9a3e809b55b7c6c8ceae4f1188d6",

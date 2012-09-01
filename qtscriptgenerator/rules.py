@@ -1,8 +1,8 @@
-import jam.session
+import kaizen.rules
 
-from jam.system import Command, Make, Copy, Mkdirs, Quilt
+from kaizen.system import Command, Make, Copy, Mkdirs, Quilt
 
-class Qtscriptgenerator(jam.session.MakeSession):
+class Qtscriptgenerator(kaizen.rules.MakeRules):
 
     url = "http://qtscriptgenerator.googlecode.com/files/qtscriptgenerator-src-%(version)s.tar.gz"
     hash = { "md5" : "9f82b0aa212f7938de37df46cd27165c",

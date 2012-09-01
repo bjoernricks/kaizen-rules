@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Dirmngr(jam.session.ConfigureSession):
+class Dirmngr(kaizen.rules.ConfigureRules):
 
     url = "ftp://ftp.gnupg.org/gcrypt/dirmngr/dirmngr-1.1.0.tar.bz2"
     hash = { "md5" : "f2570f0248f5947daac200e85291b328",

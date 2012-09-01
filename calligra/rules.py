@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Calligra(jam.session.CMakeSession):
+class Calligra(kaizen.rules.CMakeRules):
 
     url = "ftp://ftp.kde.org/pub/kde/stable/calligra-latest/calligra-%(version)s.tar.bz2"
     hash = { "md5" : "a45b9141c6bb750569e8f6554197dd50",
