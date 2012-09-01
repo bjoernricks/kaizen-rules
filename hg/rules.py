@@ -1,9 +1,9 @@
 import os.path
 
-from jam.session import MakeSession
-from jam.system import Make, Copy
+from kaizen.rules import MakeRules
+from kaizen.system import Make, Copy
 
-class Hg(MakeSession):
+class Hg(MakeRules):
 
     url = "http://mercurial.selenic.com/release/mercurial-%(version)s.tar.gz"
     hash = { "md5" : "16576b3089a88a84a35edc30e17a03a9",

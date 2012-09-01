@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Mscore(jam.session.Session):
+class Mscore(kaizen.rules.Rules):
 
     url = "http://sourceforge.net/projects/mscore/files/mscore/MuseScore-1.1/mscore-1.1.tar.bz2"
     hash = { "md5" : "68b43af92093a16f7f074c0eb560a867",

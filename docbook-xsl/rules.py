@@ -1,8 +1,8 @@
-import jam.session
+import kaizen.rules
 
-from jam.system import Copy, Mkdirs
+from kaizen.system import Copy, Mkdirs
 
-class Docbookxsl(jam.session.Session):
+class Docbookxsl(kaizen.rules.Rules):
 
     url = "http://downloads.sourceforge.net/project/docbook/docbook-xsl/%(version)s/docbook-xsl-%(version)s.tar.bz2"
     hash = { "md5" : "b5340507cb240cc7ce00632b9c40bff5",

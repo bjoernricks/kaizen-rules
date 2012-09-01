@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pythonmarkupsafe(jam.session.PythonSession):
+class Pythonmarkupsafe(kaizen.rules.PythonRules):
 
     url = "http://pypi.python.org/packages/source/M/MarkupSafe/MarkupSafe-%(version)s.tar.gz"
     hash = { "md5" : "4e7c4d965fe5e033fa2d7bb7746bb186",

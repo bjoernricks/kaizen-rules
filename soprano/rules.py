@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Soprano(jam.session.CMakeSession):
+class Soprano(kaizen.rules.CMakeRules):
 
     url = "http://downloads.sourceforge.net/project/soprano/Soprano/%(version)s/soprano-%(version)s.tar.bz2"
     hash = { "md5" : "783fb07f9679f45e987aff7a17bef649",

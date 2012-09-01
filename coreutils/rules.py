@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Coreutils(jam.session.ConfigureSession):
+class Coreutils(kaizen.rules.ConfigureRules):
 
     url = "http://ftp.gnu.org/gnu/coreutils/coreutils-%(version)s.tar.gz"
     hash = { "md5" : "f5e8bb4752ee2e876ddd99bda7471f35",

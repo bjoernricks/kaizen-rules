@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pythonbabel(jam.session.PythonSession):
+class Pythonbabel(kaizen.rules.PythonRules):
 
     url = "http://ftp.edgewall.com/pub/babel/Babel-0.9.6.tar.gz"
     hash = { "md5" : "f0edcad03dfdb5505f337ef1a7690325",

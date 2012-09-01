@@ -1,8 +1,8 @@
-import jam.session
+import kaizen.rules
 
-from jam.system import Quilt, Delete
+from kaizen.system import Quilt, Delete
 
-class Libgpod(jam.session.ConfigureSession):
+class Libgpod(kaizen.rules.ConfigureRules):
 
     url = "http://downloads.sourceforge.net/project/gtkpod/libgpod/libgpod-0.8/libgpod-%(version)s.tar.bz2"
     hash = { "md5" : "ff0fd875fa08f2a6a49dec57ce3367ab",

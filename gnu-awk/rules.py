@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Gawk(jam.session.ConfigureSession):
+class Gawk(kaizen.rules.ConfigureRules):
 
     url = "http://ftp.gnu.org/gnu/gawk/gawk-4.0.0.tar.bz2"
     hash = { "md5" : "7cdc48e99b885a4bbe0e98dcf1706b22",

@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pkgconfig(jam.session.ConfigureSession):
+class Pkgconfig(kaizen.rules.ConfigureRules):
 
     url = "http://pkg-config.freedesktop.org/releases/pkg-config-%(version)s.tar.gz"
     hash = { "md5" : "a3270bab3f4b69b7dc6dbdacbcae9745",

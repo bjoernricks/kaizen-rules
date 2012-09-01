@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pythonwebob(jam.session.PythonSession):
+class Pythonwebob(kaizen.rules.PythonRules):
 
     url = "http://pypi.python.org/packages/source/W/WebOb/WebOb-%(version)s.tar.gz"
     hash = { "md5" : "07d1a1a4b0bf0faa67cb6638c632ea61",

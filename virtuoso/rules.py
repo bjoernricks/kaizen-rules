@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Virtuosoopensource(jam.session.ConfigureSession):
+class Virtuosoopensource(kaizen.rules.ConfigureRules):
 
     url = "http://downloads.sourceforge.net/project/virtuoso/virtuoso/6.1.4/virtuoso-opensource-6.1.4.tar.gz"
     hash = { "md5" : "7110a0b4b171b84850d346f4fe648172",

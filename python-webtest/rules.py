@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pythonwebtest(jam.session.PythonSession):
+class Pythonwebtest(kaizen.rules.PythonRules):
 
     url = "http://pypi.python.org/packages/source/W/WebTest/WebTest-1.3.3.tar.gz"
     hash = { "md5" : "a35a8b6207a66e232a0fa7ee254dac76",
@@ -8,7 +8,7 @@ class Pythonwebtest(jam.session.PythonSession):
     version = "1.3.3"
     name = "WebTest"
 
-    # jam.session.PythonSession already depends on python
+    # kaizen.rules.PythonRules already depends on python
     # depends = ["python"]
 
     # uncomment to set path to source directory

@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Libplist(jam.session.CMakeSession):
+class Libplist(kaizen.rules.CMakeRules):
 
     url = "http://www.libimobiledevice.org/downloads/libplist-1.8.tar.bz2"
     hash = { "md5" : "2a9e0258847d50f9760dc3ece25f4dc6",

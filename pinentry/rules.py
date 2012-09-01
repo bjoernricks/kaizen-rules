@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pinentry(jam.session.ConfigureSession):
+class Pinentry(kaizen.rules.ConfigureRules):
 
     url = "ftp://ftp.gnupg.org/gcrypt/pinentry/pinentry-0.8.1.tar.gz"
     hash = { "md5" : "81f99904daee5331eb6738408bb024b6",

@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Libjpeg(jam.session.ConfigureSession):
+class Libjpeg(kaizen.rules.ConfigureRules):
 
     url = "http://www.ijg.org/files/jpegsrc.v8c.tar.gz"
     hash = { "md5" : "a2c10c04f396a9ce72894beb18b4e1f9",

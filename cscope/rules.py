@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Cscope(jam.session.ConfigureSession):
+class Cscope(kaizen.rules.ConfigureRules):
 
     url = "http://downloads.sourceforge.net/project/cscope/cscope/15.7a/cscope-15.7a.tar.bz2"
     hash = { "md5" : "da43987622ace8c36bbf14c15a350ec1",

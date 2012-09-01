@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Rasqal(jam.session.ConfigureSession):
+class Rasqal(kaizen.rules.ConfigureRules):
 
     url = "http://download.librdf.org/source/rasqal-%(version)s.tar.gz"
     hash = { "md5" : "a3662b8d9efef9d8ef0a3c182450fba2",

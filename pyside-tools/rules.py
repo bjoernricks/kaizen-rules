@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pysidetools(jam.session.CMakeSession):
+class Pysidetools(kaizen.rules.CMakeRules):
 
     url = "http://www.pyside.org/files/pyside-tools-0.2.13.tar.bz2"
     hash = { "md5" : "14d3a36df06d680357d7bc1960f19a6d",

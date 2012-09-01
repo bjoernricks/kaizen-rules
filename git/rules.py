@@ -1,9 +1,9 @@
 import os.path
-import jam.session
+import kaizen.rules
 
-from jam.system import Copy, Configure
+from kaizen.system import Copy, Configure
 
-class Git(jam.session.ConfigureSession):
+class Git(kaizen.rules.ConfigureRules):
 
     url =  "http://git-core.googlecode.com/files/git-%(version)s.tar.gz"
     hash = { "md5" : "ab2716db51580037c7ebda4c8e9d56eb",
@@ -27,7 +27,7 @@ class Git(jam.session.ConfigureSession):
                           "git-completion.bash"),
              os.path.join(self.dest_path, "etc",
                           "bash_completion.d", "git")).run()
-        Copy(os.path.join(self.session_path, "contrib", "giteditor"),
+        Copy(os.path.join(self.rules_path, "contrib", "giteditor"),
              os.path.join(self.dest_path, "share", "git",
                           "contrib", "giteditor")).run()
 

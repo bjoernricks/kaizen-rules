@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Taglib(jam.session.CMakeSession):
+class Taglib(kaizen.rules.CMakeRules):
 
     url = "http://developer.kde.org/~wheeler/files/src/taglib-1.7.tar.gz"
     hash = { "md5" : "6a7e312668f153fa905a81714aebc257",

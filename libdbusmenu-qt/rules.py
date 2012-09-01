@@ -1,8 +1,8 @@
-import jam.session
+import kaizen.rules
 
-from jam.system import Quilt
+from kaizen.system import Quilt
 
-class Libdbusmenuqt(jam.session.CMakeSession):
+class Libdbusmenuqt(kaizen.rules.CMakeRules):
 
     url = "http://launchpad.net/libdbusmenu-qt/trunk/%(version)s/+download/libdbusmenu-qt-%(version)s.tar.bz2"
     hash = { "md5" : "cc6b7b551377e2a07f6fa5afef0d29ff",

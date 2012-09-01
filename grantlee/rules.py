@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Grantlee(jam.session.CMakeSession):
+class Grantlee(kaizen.rules.CMakeRules):
 
     url = "http://downloads.grantlee.org/grantlee-%(version)s.tar.gz"
     hash = { "md5" : "0622ed30630a44b5fac0bfa7e176d3fe",

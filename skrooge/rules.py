@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Skrooge(jam.session.CMakeSession):
+class Skrooge(kaizen.rules.CMakeRules):
 
     url = "http://skrooge.org/files/skrooge-1.2.0.tar.bz2"
     hash = { "md5" : "d137d2940f2f7d3dca5432aa652359e9",

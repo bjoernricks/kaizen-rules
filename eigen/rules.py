@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Eigen(jam.session.CMakeSession):
+class Eigen(kaizen.rules.CMakeRules):
 
     url = "http://bitbucket.org/eigen/eigen/get/%(version)s.tar.bz2"
     hash = { "md5" : "43070952464a5bf21694e082e7fb8fce",

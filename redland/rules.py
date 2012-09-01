@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Redland(jam.session.ConfigureSession):
+class Redland(kaizen.rules.ConfigureRules):
 
     url = "http://download.librdf.org/source/redland-%(version)s.tar.gz"
     hash = { "md5" : "b0deb87f3c7d3237a3d587c1e0f2f266",

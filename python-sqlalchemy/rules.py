@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pythonsqlalchemy(jam.session.PythonSession):
+class Pythonsqlalchemy(kaizen.rules.PythonRules):
 
     url = "http://downloads.sourceforge.net/project/sqlalchemy/sqlalchemy/0.7.2/SQLAlchemy-%(version)s.tar.gz"
     hash = { "md5" : "234494800f2a0ac3ad7c06e0ffa4641e",

@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pythonpyliblzma(jam.session.PythonSession):
+class Pythonpyliblzma(kaizen.rules.PythonRules):
 
     url =  "http://pypi.python.org/packages/source/p/pyliblzma/pyliblzma-%(version)s.tar.bz2"
     hash = { "md5" : "500f61116ee1ab4063b49c121786863a",

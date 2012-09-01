@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Giflib(jam.session.ConfigureSession):
+class Giflib(kaizen.rules.ConfigureRules):
 
     url = "http://downloads.sourceforge.net/project/giflib/giflib%%204.x/giflib-%(version)s/giflib-%(version)s.tar.bz2"
     hash = { "md5" : "7125644155ae6ad33dbc9fc15a14735f",

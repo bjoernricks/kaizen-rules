@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pythonurwid(jam.session.PythonSession):
+class Pythonurwid(kaizen.rules.PythonRules):
 
     url = "http://excess.org/urwid/urwid-1.0.0.tar.gz"
     hash = { "md5" : "487e98c5aef14af3b95ed2afa6147dd9",

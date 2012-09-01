@@ -1,10 +1,10 @@
 import os.path
 
-import jam.session
+import kaizen.rules
 
-from jam.system import Command, Replace
+from kaizen.system import Command, Replace
 
-class Sharedmimeinfo(jam.session.ConfigureSession):
+class Sharedmimeinfo(kaizen.rules.ConfigureRules):
 
     url = "http://freedesktop.org/~hadess/shared-mime-info-%(version)s.tar.bz2"
     hash = { "md5" : "967d68d3890ba3994cfce3adf5b8f15b",

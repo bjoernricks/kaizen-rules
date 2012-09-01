@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Libgpgerror(jam.session.ConfigureSession):
+class Libgpgerror(kaizen.rules.ConfigureRules):
 
     url = "ftp://ftp.gnupg.org/gcrypt/libgpg-error/libgpg-error-1.10.tar.bz2"
     hash = { "md5" : "736a03daa9dc5873047d4eb4a9c22a16",

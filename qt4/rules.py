@@ -1,9 +1,9 @@
 import os.path
-import jam.session
+import kaizen.rules
 
-from jam.system import Command, Make, Copy, Quilt, Mkdirs, Move, Delete
+from kaizen.system import Command, Make, Copy, Quilt, Mkdirs, Move, Delete
 
-class Qt4(jam.session.ConfigureSession):
+class Qt4(kaizen.rules.ConfigureRules):
 
     url = "http://get.qt.nokia.com/qt/source/qt-everywhere-opensource-src-%(version)s.tar.gz"
     hash = { "md5" : "7960ba8e18ca31f0c6e4895a312f92ff",

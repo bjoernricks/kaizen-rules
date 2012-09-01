@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pythonpaste(jam.session.PythonSession):
+class Pythonpaste(kaizen.rules.PythonRules):
 
     url = "http://pypi.python.org/packages/source/P/Paste/Paste-1.7.5.1.tar.gz"
     hash = { "md5" : "7ea5fabed7dca48eb46dc613c4b6c4ed",

@@ -1,9 +1,9 @@
-import jam.session
+import kaizen.rules
 
-from jam.system import Quilt
-from jam.session.groups import KDE
+from kaizen.system import Quilt
+from kaizen.rules.groups import KDE
 
-class Kdelibs(jam.session.CMakeSession):
+class Kdelibs(kaizen.rules.CMakeRules):
 
     url = "ftp://ftp.kde.org/pub/kde/stable/%(version)s/src/kdelibs-%(version)s.tar.bz2"
     hash = { "md5" : "c19858c68f9a209ae521d7fb3c34747b",
@@ -26,6 +26,6 @@ class Kdelibs(jam.session.CMakeSession):
                       "-DWITH_HSPELL=OFF",
                       "-DWITH_FAM=OFF",
                       "-DBUNDLE_INSTALL_DIR=%(apps_dir)s/KDE4",
-                      # "-DKDE_DISTRIBUTION_TEXT=jam software manager",
+                      # "-DKDE_DISTRIBUTION_TEXT=kaizen software manager",
                       "-DCMAKE_BUILD_TYPE=Release",
                       ]

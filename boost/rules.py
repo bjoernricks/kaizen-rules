@@ -1,9 +1,9 @@
 import os.path
-import jam.session
+import kaizen.rules
 
-from jam.system import Command, Replace
+from kaizen.system import Command, Replace
 
-class Boost(jam.session.Session):
+class Boost(kaizen.rules.Rules):
 
     url = "http://downloads.sourceforge.net/project/boost/boost/1.48.0/boost_1_48_0.tar.bz2"
     hash = { "md5" : "d1e9a7a7f532bb031a3c175d86688d95",

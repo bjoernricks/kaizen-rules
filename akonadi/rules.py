@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Akonadi(jam.session.CMakeSession):
+class Akonadi(kaizen.rules.CMakeRules):
 
     url = "ftp://ftp.kde.org/pub/kde/stable/akonadi/src/akonadi-%(version)s.tar.bz2"
     hash = { "md5" : "07e2aa2e6953ac518f9306911747e264",

@@ -1,8 +1,8 @@
-import jam.session
+import kaizen.rules
 
-from jam.system import Quilt
+from kaizen.system import Quilt
 
-class Shiboken(jam.session.CMakeSession):
+class Shiboken(kaizen.rules.CMakeRules):
 
     url = "http://www.pyside.org/files/%(name)s-%(version)s.tar.bz2"
     hash = { "md5" : "b98e7c35edef95a77594a6d1801c5875",

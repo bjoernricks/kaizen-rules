@@ -1,8 +1,8 @@
-import jam.session
+import kaizen.rules
 
-from jam.system import Configure, Make
+from kaizen.system import Configure, Make
 
-class Qca(jam.session.ConfigureSession):
+class Qca(kaizen.rules.ConfigureRules):
 
     url = "http://delta.affinix.com/download/qca/2.0/qca-%(version)s.tar.bz2"
     hash = { "md5" : "fc15bd4da22b8096c51fcfe52d2fa309",

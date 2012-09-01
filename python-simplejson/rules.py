@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pythonsimplejson(jam.session.PythonSession):
+class Pythonsimplejson(kaizen.rules.PythonRules):
 
     url = "http://pypi.python.org/packages/source/s/simplejson/simplejson-2.3.2.tar.gz"
     hash = { "md5" : "0863e016f682f06ead07dd9efad95194",
@@ -8,7 +8,7 @@ class Pythonsimplejson(jam.session.PythonSession):
     version = "2.3.2"
     name = "simplejson"
 
-    # jam.session.PythonSession already depends on python
+    # kaizen.rules.PythonRules already depends on python
     # depends = ["python"]
 
     # uncomment to set path to source directory

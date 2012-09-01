@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pythonfunkload(jam.session.PythonSession):
+class Pythonfunkload(kaizen.rules.PythonRules):
 
     url = "http://pypi.python.org/packages/source/f/funkload/funkload-%(version)s.tar.gz"
     hash = { "md5" : "d2e5e5098e332c75b02825ed4318e49c",

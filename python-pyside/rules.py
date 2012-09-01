@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pyside(jam.session.CMakeSession):
+class Pyside(kaizen.rules.CMakeRules):
 
     url = "http://www.pyside.org/files/%(name)s-qt4.7+%(version)s.tar.bz2"
     hash = { "md5" : "63d1104cf245d9eea307434c94e15443",

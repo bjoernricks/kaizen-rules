@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Oxygenicons(jam.session.CMakeSession):
+class Oxygenicons(kaizen.rules.CMakeRules):
 
     url = "ftp://ftp.kde.org/pub/kde/stable/%(version)s/src/oxygen-icons-%(version)s.tar.bz2"
     hash = { "md5" : "2ae26ba235f207eb29677637c1d059a7",

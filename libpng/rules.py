@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Libpng(jam.session.ConfigureSession):
+class Libpng(kaizen.rules.ConfigureRules):
 
     url = "http://sourceforge.net/projects/libpng/files/libpng15/1.5.6/libpng-1.5.6.tar.bz2"
     hash = { "md5" : "2107095191b0e8bd9a0f4f930c1948c3",

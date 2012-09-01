@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Gpgme(jam.session.ConfigureSession):
+class Gpgme(kaizen.rules.ConfigureRules):
 
     url = "ftp://ftp.gnupg.org/gcrypt/gpgme/gpgme-%(version)s.tar.bz2"
     hash = { "md5" : "90afa8436ce2b2683c001c824bd22601",

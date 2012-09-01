@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Fontconfig(jam.session.ConfigureSession):
+class Fontconfig(kaizen.rules.ConfigureRules):
 
     url = "http://www.freedesktop.org/software/fontconfig/release/fontconfig-%(version)s.tar.gz"
     hash = { "md5" : "26c83855ed256b5c032baae032fadc4f",

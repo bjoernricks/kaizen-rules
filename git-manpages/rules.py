@@ -1,9 +1,9 @@
 import os.path
-import jam.session
+import kaizen.rules
 
-from jam.system import Copy
+from kaizen.system import Copy
 
-class Gitmanpages(jam.session.Session):
+class Gitmanpages(kaizen.rules.Rules):
 
     url = "http://git-core.googlecode.com/files/git-manpages-%(version)s.tar.gz"
     hash = { "md5" : "5066600fe67986acd36c008c876e9489",

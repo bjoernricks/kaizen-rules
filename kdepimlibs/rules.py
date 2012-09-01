@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Kdepimlibs(jam.session.CMakeSession):
+class Kdepimlibs(kaizen.rules.CMakeRules):
 
     url = "ftp://ftp.kde.org/pub/kde/stable/4.8.0/src/kdepimlibs-4.8.0.tar.bz2"
     hash = { "md5" : "3e1ea1d5f56eb87c0c305d941ac414c0",
@@ -14,5 +14,5 @@ class Kdepimlibs(jam.session.CMakeSession):
 
     configure_args = [
                       "-DBUNDLE_INSTALL_DIR=%(apps_dir)s/KDE4",
-                      "-DKDE_DISTRIBUTION_TEXT=\"jam software manager\"",
+                      "-DKDE_DISTRIBUTION_TEXT=\"kaizen software manager\"",
                       ]

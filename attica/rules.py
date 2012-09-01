@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Attica(jam.session.CMakeSession):
+class Attica(kaizen.rules.CMakeRules):
 
     url = "ftp://ftp.kde.org/pub/kde/stable/attica/attica-%(version)s.tar.bz2"
     hash = { "md5" : "5a77f678422e7a52e3a3abb2d7ad0499",

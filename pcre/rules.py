@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pcre(jam.session.CMakeSession):
+class Pcre(kaizen.rules.CMakeRules):
 
     url = "http://downloads.sourceforge.net/project/pcre/pcre/%(version)s/pcre-%(version)s.tar.bz2"
     hash = { "md5" : "0a7b592bea64b7aa7f4011fc7171a730",

@@ -1,8 +1,8 @@
-import jam.session
+import kaizen.rules
 
-from jam.system import Copy, Make
+from kaizen.system import Copy, Make
 
-class Getopt(jam.session.Session):
+class Getopt(kaizen.rules.Rules):
 
     url = "http://software.frodo.looijaard.name/getopt/files/getopt-%(version)s.tar.gz"
     hash = { "md5" : "02188ca68da27c4175d6e9f3da732101",

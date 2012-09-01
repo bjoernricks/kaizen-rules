@@ -1,8 +1,8 @@
-import jam.session
+import kaizen.rules
 
-from jam.system import Delete, Quilt
+from kaizen.system import Delete, Quilt
 
-class Cmake(jam.session.ConfigureSession):
+class Cmake(kaizen.rules.ConfigureRules):
 
     url = "http://www.cmake.org/files/v2.8/cmake-%(version)s.tar.gz"
     hash = { "md5" : "e1b237aeaed880f65dec9c20602452f6",

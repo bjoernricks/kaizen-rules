@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Amarok(jam.session.CMakeSession):
+class Amarok(kaizen.rules.CMakeRules):
 
     url = "ftp://ftp.kde.org/pub/kde/stable/amarok/2.5.0/src/amarok-2.5.0.tar.bz2"
     hash = { "md5" : "b7983eaa33e4771769ae9e330c811995",

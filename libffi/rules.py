@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Libffi(jam.session.ConfigureSession):
+class Libffi(kaizen.rules.ConfigureRules):
 
     url = "ftp://sourceware.org/pub/libffi/libffi-3.0.10.tar.gz"
     hash = { "md5" : "79390673f5d07a8fb342bc09b5055b6f",

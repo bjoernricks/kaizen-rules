@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Pythongitpython(jam.session.PythonSession):
+class Pythongitpython(kaizen.rules.PythonRules):
 
     url = "http://pypi.python.org/packages/source/G/GitPython/GitPython-%(version)s.tar.gz"
     hash = { "md5" : "849082fe29adc653a3621465213cab96",

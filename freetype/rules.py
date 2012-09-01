@@ -1,6 +1,6 @@
-import jam.session
+import kaizen.rules
 
-class Freetype(jam.session.ConfigureSession):
+class Freetype(kaizen.rules.ConfigureRules):
 
     url = "http://downloads.sourceforge.net/project/freetype/freetype2/%(version)s/freetype-%(version)s.tar.gz"
     hash = { "md5" : "c15f6dc8ed190d67b89ae09aaf7896b4",

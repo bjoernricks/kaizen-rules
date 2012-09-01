@@ -1,8 +1,8 @@
-import jam.session
+import kaizen.rules
 
-from jam.system import Quilt
+from kaizen.system import Quilt
 
-class Libical(jam.session.CMakeSession):
+class Libical(kaizen.rules.CMakeRules):
 
     url = "http://downloads.sourceforge.net/project/freeassociation/libical/libical-%(version)s/libical-%(version)s.tar.gz"
     hash = { "md5" : "e549f434d5fbf9cd156c60ed4943618f",
