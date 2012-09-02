@@ -1,5 +1,7 @@
 import kaizen.rules
 
+from kaizen.system import Quilt
+
 class Gettext(kaizen.rules.ConfigureRules):
 
     url = "http://ftp.gnu.org/pub/gnu/gettext/gettext-%(version)s.tar.gz"
@@ -8,6 +10,8 @@ class Gettext(kaizen.rules.ConfigureRules):
     version = "0.18.1.1"
     name = "gettext"
 
+    patch_cmd = Quilt
+
     configure_args = ["--without-git",
                       "--without-cvs",
                       "--disable-csharp",
@@ -15,4 +19,4 @@ class Gettext(kaizen.rules.ConfigureRules):
                       "--without-emacs",
                      ]
 
-    depends = ["expat", "ncurses"]
+    depends = ["libexpat", "ncurses"]
