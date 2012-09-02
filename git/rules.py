@@ -5,14 +5,17 @@ from kaizen.system import Copy, Configure
 
 class Git(kaizen.rules.ConfigureRules):
 
-    url =  "http://git-core.googlecode.com/files/git-%(version)s.tar.gz"
-    hash = { "md5" : "ab2716db51580037c7ebda4c8e9d56eb",
-             "sha1" : "501ee8685c148d377950e42c111e01d83fd1d41a" }
-    version = "1.7.10"
+    url =  ["https://github.com/git/git/tarball/v%(version)s",
+            "git-%(version)s.tar.gz"]
+    hash = { "md5" : "df20675abd4f9ae44a72c3b5c22a7243",
+             "sha1" : "b5f61c57163208d6ab4e1926bfa070815bef3783" }
+    version = "1.7.12"
     name = "git"
 
     depends = ["python", "gettext", "git-manpages", "perl", "openssl",
                "libcurl", "zlib", "libexpat"]
+
+    src_path = "%(src_dir)s/git-git-14d20a7"
 
     configure_args = [
                       "--with-gitconfig=etc/gitconfig",
