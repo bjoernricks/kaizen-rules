@@ -12,6 +12,6 @@ class Apiextractor(kaizen.rules.CMakeRules):
 
     depends = ["python", "qt4", "libxml2", "libxslt"]
 
-    patchsystem = Quilt
+    patch_cmd = Quilt
 
     configure_args = ["-DBUILD_TESTS=FALSE"]

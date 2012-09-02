@@ -16,7 +16,7 @@ class Cmake(kaizen.rules.ConfigureRules):
                       "--system-libs", "--datadir=/share/cmake",
                       "--no-system-libarchive"]
 
-    patchsystem = Quilt
+    patch_cmd = Quilt
 
     def distclean(self):
         Delete(self.build_path).run()

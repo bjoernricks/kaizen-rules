@@ -12,7 +12,7 @@ class Qtscriptgenerator(kaizen.rules.MakeRules):
 
     depends = ["qt4", "phonon"]
 
-    patchsystem = Quilt
+    patch_cmd = Quilt
 
     build_path = "%(src_path)s"
 

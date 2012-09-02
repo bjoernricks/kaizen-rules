@@ -13,7 +13,7 @@ class Kdelibs(kaizen.rules.CMakeRules):
 
     groups = [KDE]
 
-    patchsystem = Quilt
+    patch_cmd = Quilt
 
     depends = ["qt4", "perl", "zlib", "strigi", "attica", "openssl",
                "soprano", "shared-desktop-ontologies", "dbus", "libdbusmenu-qt",

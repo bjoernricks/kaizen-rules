@@ -12,7 +12,7 @@ class Mysql(kaizen.rules.CMakeRules):
 
     depends = ["libreadline", "openssl", "zlib"]
 
-    # patchsystem = Quilt
+    # patch_cmd = Quilt
 
     configure_args = ["-DMYSQL_DATADIR=%(prefix)s/var/mysql",
                       "-DINSTALL_MYSQLSHAREDIR=%(prefix)s/share/mysql",

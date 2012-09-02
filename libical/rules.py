@@ -10,6 +10,6 @@ class Libical(kaizen.rules.CMakeRules):
     version = "0.48"
     name = "libical"
 
-    patchsystem = Quilt
+    patch_cmd = Quilt
 
     parallel = False
