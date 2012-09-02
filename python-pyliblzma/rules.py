@@ -8,4 +8,4 @@ class Pythonpyliblzma(kaizen.rules.PythonRules):
     version = "0.5.3"
     name = "pyliblzma"
 
-    depends = ["xz"]
+    depends = [ "pkg-config", "xz"]
