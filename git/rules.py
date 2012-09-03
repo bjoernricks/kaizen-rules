@@ -1,21 +1,18 @@
 import os.path
 import kaizen.rules
 
-from kaizen.system import Copy, Configure
+from kaizen.system import Copy, Configure, Delete
 
 class Git(kaizen.rules.ConfigureRules):
 
-    url =  ["https://github.com/git/git/tarball/v%(version)s",
-            "git-%(version)s.tar.gz"]
-    hash = { "md5" : "df20675abd4f9ae44a72c3b5c22a7243",
-             "sha1" : "b5f61c57163208d6ab4e1926bfa070815bef3783" }
+    url = "http://git-core.googlecode.com/files/git-%(version)s.tar.gz"
+    hash = { "md5" : "ceb1a6b17a3e33bbc70eadf8fce5876c",
+             "sha1" : "42ec1037f1ee5bfeb405710c83b73c0515ad26e6" }
     version = "1.7.12"
     name = "git"
 
     depends = ["python", "gettext", "git-manpages", "perl", "openssl",
                "libcurl", "zlib", "libexpat"]
-
-    src_path = "%(src_dir)s/git-git-14d20a7"
 
     configure_args = [
                       "--with-gitconfig=etc/gitconfig",
