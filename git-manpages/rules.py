@@ -6,9 +6,9 @@ from kaizen.system import Copy
 class Gitmanpages(kaizen.rules.Rules):
 
     url = "http://git-core.googlecode.com/files/git-manpages-%(version)s.tar.gz"
-    hash = { "md5" : "5066600fe67986acd36c008c876e9489",
-             "sha1" : "5852d1dead0190edeba1803a70fac5d76523a616" }
-    version = "1.7.10"
+    hash = { "md5" : "0070ad185cfc29da545abe35ba8862e7",
+             "sha1" : "fb572729ca5c60161dc651564a50d4378507e20f" }
+    version = "1.7.12"
     name = "git-manpages"
 
     def destroot(self):

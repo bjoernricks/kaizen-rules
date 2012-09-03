@@ -11,7 +11,7 @@ class Qt4(kaizen.rules.ConfigureRules):
     version = "4.8.1"
     name = "qt4"
 
-    patchsystem = Quilt
+    patch_cmd = Quilt
 
     src_path = "%(src_dir)s/qt-everywhere-opensource-src-%(version)s"
 

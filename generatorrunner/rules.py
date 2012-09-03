@@ -12,6 +12,6 @@ class Generatorrunner(kaizen.rules.CMakeRules):
 
     depends = ["qt4", "apiextractor"]
 
-    patchsystem = Quilt
+    patch_cmd = Quilt
 
     configure_args = ["-DBUILD_TESTS=FALSE"]

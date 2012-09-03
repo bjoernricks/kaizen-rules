@@ -1,14 +1,14 @@
 import os.path
 
 from kaizen.rules import MakeRules
-from kaizen.system import Make, Copy
+from kaizen.system import Make, Copy, Delete
 
 class Hg(MakeRules):
 
     url = "http://mercurial.selenic.com/release/mercurial-%(version)s.tar.gz"
-    hash = { "md5" : "16576b3089a88a84a35edc30e17a03a9",
-             "sha1" : "7983f564c06aef598fcfd7f8c1c33f4669362760" }
-    version = "2.0.1"
+    hash = { "md5" : "22a46a3ae64a5d625f068e588b4d6ec2",
+             "sha1" : "59e42fd0aebabe8ec9bd59ca6a41416032f7ca48" }
+    version = "2.3.1"
     depends = ["python-docutils"]
     name = "hg"
 

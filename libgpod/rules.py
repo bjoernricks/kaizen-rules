@@ -10,7 +10,7 @@ class Libgpod(kaizen.rules.ConfigureRules):
     version = "0.8.2"
     name = "libgpod"
 
-    patchsystem = Quilt
+    patch_cmd = Quilt
     depends = ["libxml2", "python", "taglib", "perl", "gettext", "libplist",
                "pkg-config", "glib2", "gdk-pixbuf", "sqlite3"]
 

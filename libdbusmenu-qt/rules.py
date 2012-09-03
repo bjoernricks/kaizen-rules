@@ -12,6 +12,6 @@ class Libdbusmenuqt(kaizen.rules.CMakeRules):
 
     depends = ["qt4"]
 
-    patchsystem = Quilt
+    patch_cmd = Quilt
 
     configure_args = ["-DWITH_DOC=OFF"]

@@ -12,6 +12,6 @@ class Shiboken(kaizen.rules.CMakeRules):
 
     depends = ["python", "qt4", "apiextractor", "generatorrunner"]
 
-    patchsystem = Quilt
+    patch_cmd = Quilt
 
     configure_args = ["-DBUILD_TESTS=FALSE"]

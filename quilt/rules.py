@@ -9,7 +9,7 @@ class Quilt(ConfigureRules):
     version = "0.60"
     name = "quilt"
 
-    depends = ["gnu-sed"]
+    depends = ["gnu-sed", "coreutils"]
 
     build_path = "%(src_path)s"
 
