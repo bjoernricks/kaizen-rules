@@ -27,6 +27,10 @@ class Git(kaizen.rules.ConfigureRules):
                           "git-completion.bash"),
              os.path.join(self.dest_path, "etc",
                           "bash_completion.d", "git")).run()
+        Copy(os.path.join(self.build_path, "contrib", "completion",
+                          "git-prompt.sh"),
+             os.path.join(self.dest_path, "etc",
+                          "bash_completion.d", "git-prompt")).run()
         Copy(os.path.join(self.rules_path, "contrib", "giteditor"),
              os.path.join(self.dest_path, "share", "git",
                           "contrib", "giteditor")).run()
