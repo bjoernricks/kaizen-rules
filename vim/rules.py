@@ -22,5 +22,7 @@ class Vim(kaizen.rules.ConfigureRules):
 
     depends = ["ctags", "cscope", "gettext", "libiconv"]
 
+    destroot_env = {"LANG" : "c"}
+
     def pre_configure(self):
         Copy(self.src_path +"/*", self.build_path).run()
