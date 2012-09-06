@@ -5,10 +5,10 @@ from kaizen.system import Delete
 
 class Diffutils(kaizen.rules.ConfigureRules):
 
-    url = "http://ftp.gnu.org/gnu/diffutils/diffutils-3.0.tar.gz"
-    hash = { "md5" : "684aaba1baab743a2a90e52162ff07da",
-             "sha1" : "17fcdcd435ef6b424aa9c7a487ffde408d1a00e6" }
-    version = "3.0"
+    url = "ftp://ftp.gnu.org/gnu/diffutils/diffutils-%(version)s.tar.xz"
+    hash = { "md5" : "26ff64c332429c830c154be46b393382",
+             "sha1" : "59b9742e96e2512d4d6f9af7964d71b6ea5a9ef0" }
+    version = "3.2"
     name = "diffutils"
 
     def post_destroot(self):
