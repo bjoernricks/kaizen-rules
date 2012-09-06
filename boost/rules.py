@@ -19,7 +19,7 @@ class Boost(kaizen.rules.Rules):
 
     build_args = ["--build-dir=%(build_path)s"]
 
-    depends = ["python", "zlib", "expat", "libiconv"]
+    depends = ["python", "zlib", "libexpat", "libiconv"]
 
     def configure(self):
         cmd = os.path.join(self.src_path, "bootstrap.sh")
