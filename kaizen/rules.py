@@ -11,7 +11,8 @@ class Kaizen(kaizen.rules.PythonDevelopRules):
 
     # depend on python-bz2file for multiprocess .bz2 archives and
     # depend on python-pyliblzma for lzma compresses .xz archives.
-    runtime_depends = ["python-bz2file", "python-pyliblzma"]
+    # depend on python-quilt for patch file handling
+    runtime_depends = ["python-bz2file", "python-pyliblzma", "python-quilt"]
 
     extract = NoneFile
 
