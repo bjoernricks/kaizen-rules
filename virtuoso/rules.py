@@ -2,17 +2,17 @@ import kaizen.rules
 
 class Virtuosoopensource(kaizen.rules.ConfigureRules):
 
-    url = "http://downloads.sourceforge.net/project/virtuoso/virtuoso/6.1.4/virtuoso-opensource-6.1.4.tar.gz"
-    hash = { "md5" : "7110a0b4b171b84850d346f4fe648172",
-             "sha1" : "39b2ad28e7ee58b5bca1ba8ff8365266dfa55fa7" }
-    version = "6.1.4"
+    url = "http://downloads.sourceforge.net/project/virtuoso/virtuoso/%(version)s/virtuoso-opensource-%(version)s.tar.gz"
+    hash = { "md5" : "3991149c570f3738c3e819ce603e487f",
+             "sha1" : "03bc14b1627d16d76687f8b8659801966aab3fb4" }
+    version = "6.1.6"
     name = "virtuoso-opensource"
 
     build_path = "%(src_path)s"
 
     depends = ["libiodbc",
                "openssl",
-               "libxml2", 
+               "libxml2",
                "zlib",
                "openldap",
                "gnu-awk",
