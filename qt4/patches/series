@@ -1,2 +1,4 @@
-qt48setx.patch
+remove_unsupported_warning_10.8.diff
+qsysinfo_10.8.diff
+patch-ML-fixes.diff
 correct_compiler_flags.diff
