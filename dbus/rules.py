@@ -6,9 +6,9 @@ from kaizen.system import Move
 class Dbus(kaizen.rules.ConfigureRules):
 
     url = "http://dbus.freedesktop.org/releases/dbus/dbus-%(version)s.tar.gz"
-    hash = { "md5" : "44a2a10678e7e50460879c3eb4453a65",
-             "sha1" : "d6e6538cfc1ed71992f6786a6da55d815d995b5b" }
-    version = "1.4.16"
+    hash = { "md5" : "5ec43dc4554cba638917317b2b4f7640",
+             "sha1" : "17e619f008301592b7f01a60e7cf18e2752b5270" }
+    version = "1.6.4"
     name = "dbus"
 
     configure_args = ["--without-x", "--enable-launchd"]

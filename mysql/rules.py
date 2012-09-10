@@ -4,10 +4,11 @@ from kaizen.system import Quilt
 
 class Mysql(kaizen.rules.CMakeRules):
 
-    url = "http://downloads.mysql.com/archives/mysql-5.5/mysql-%(version)s.tar.gz"
-    hash = { "md5" : "375794ebf84b4c7b63f1676bc7416cd0",
-             "sha1" : "d5066327c41ac5a338ca0bb748e50bc4e1902442" }
-    version = "5.5.20"
+    url = ["http://dev.mysql.com/get/Downloads/MySQL-5.5/mysql-%(version)s.tar.gz/from/http://cdn.mysql.com/",
+           "mysql-%(version)s"]
+    hash = { "md5" : "82baf46acfced6eef072e9d8a479c86e",
+             "sha1" : "d53dfbe4ac1119e4c4a33d639f2904abdd0f226d" }
+    version = "5.5.27"
     name = "mysql"
 
     depends = ["libreadline", "openssl", "zlib"]
