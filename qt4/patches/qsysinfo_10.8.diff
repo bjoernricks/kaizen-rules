@@ -1,0 +1,59 @@
+From 665355e0bab5a6e7d04596cac3ca169f2e458ca7 Mon Sep 17 00:00:00 2001
+From: Morten Sorvig <morten.sorvig@nokia.com>
+Date: Fri, 25 May 2012 13:27:14 +0200
+Subject: [PATCH] Add Mac OS 10.8 QSysInfo enums
+
+Change-Id: If52192c5dcd8ba55b7ae7d3e3c4aea75c32d0f99
+Reviewed-by: James Turner <james.turner@kdab.com>
+Reviewed-by: Christoph Schleifenbaum <christoph.schleifenbaum@kdab.com>
+Reviewed-by: Bradley T. Hughes <bradley.hughes@nokia.com>
+---
+ src/corelib/global/qglobal.cpp |    2 ++
+ src/corelib/global/qglobal.h   |    4 +++-
+ 2 files changed, 5 insertions(+), 1 deletion(-)
+
+diff --git a/src/corelib/global/qglobal.cpp b/src/corelib/global/qglobal.cpp
+index 493b2ae..98ed832 100644
+--- a/src/corelib/global/qglobal.cpp
++++ b/src/corelib/global/qglobal.cpp
+@@ -1174,6 +1174,7 @@ bool qSharedBuild()
+     \value MV_10_5     Mac OS X 10.5
+     \value MV_10_6     Mac OS X 10.6
+     \value MV_10_7     Mac OS X 10.7
++    \value MV_10_8     Mac OS X 10.8
+     \value MV_Unknown  An unknown and currently unsupported platform
+ 
+     \value MV_CHEETAH  Apple codename for MV_10_0
+@@ -1184,6 +1185,7 @@ bool qSharedBuild()
+     \value MV_LEOPARD  Apple codename for MV_10_5
+     \value MV_SNOWLEOPARD  Apple codename for MV_10_6
+     \value MV_LION     Apple codename for MV_10_7
++    \value MV_MOUNTAINLION Apple codename for MV_10_8
+ 
+     \sa WinVersion, SymbianVersion
+ */
+diff --git a/src/corelib/global/qglobal.h b/src/corelib/global/qglobal.h
+index 406be66..17856b2 100644
+--- a/src/corelib/global/qglobal.h
++++ b/src/corelib/global/qglobal.h
+@@ -1622,6 +1622,7 @@ public:
+         MV_10_5 = 0x0007,
+         MV_10_6 = 0x0008,
+         MV_10_7 = 0x0009,
++        MV_10_8 = 0x000A,
+ 
+         /* codenames */
+         MV_CHEETAH = MV_10_0,
+@@ -1631,7 +1632,8 @@ public:
+         MV_TIGER = MV_10_4,
+         MV_LEOPARD = MV_10_5,
+         MV_SNOWLEOPARD = MV_10_6,
+-        MV_LION = MV_10_7
++        MV_LION = MV_10_7,
++        MV_MOUNTAINLION = MV_10_8
+     };
+     static const MacVersion MacintoshVersion;
+ #endif
+-- 
+1.7.10
+

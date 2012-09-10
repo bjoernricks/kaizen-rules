@@ -1,0 +1,31 @@
+From 422f1b68d2caf49e9df45b24f486340835c8dbc7 Mon Sep 17 00:00:00 2001
+From: Morten Sorvig <morten.sorvig@nokia.com>
+Date: Fri, 25 May 2012 14:38:48 +0200
+Subject: [PATCH] Mac: Remove "unsupported" warning for 10.8
+
+Change-Id: I4e4447af16ab1aaa6b7a6eecf2e55718e4fb69d4
+Reviewed-by: James Turner <james.turner@kdab.com>
+Reviewed-by: Thiago Macieira <thiago.macieira@intel.com>
+---
+ src/corelib/global/qglobal.h |    5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/src/corelib/global/qglobal.h b/src/corelib/global/qglobal.h
+index c3ff99e..41f3a27 100644
+--- a/src/corelib/global/qglobal.h
++++ b/src/corelib/global/qglobal.h
+@@ -324,7 +324,10 @@ namespace QT_NAMESPACE {}
+ #  if !defined(MAC_OS_X_VERSION_10_7)
+ #       define MAC_OS_X_VERSION_10_7 MAC_OS_X_VERSION_10_6 + 1
+ #  endif
+-#  if (MAC_OS_X_VERSION_MAX_ALLOWED > MAC_OS_X_VERSION_10_7)
++#  if !defined(MAC_OS_X_VERSION_10_8)
++#       define MAC_OS_X_VERSION_10_8 MAC_OS_X_VERSION_10_7 + 1
++#  endif
++#  if (MAC_OS_X_VERSION_MAX_ALLOWED > MAC_OS_X_VERSION_10_8)
+ #    warning "This version of Mac OS X is unsupported"
+ #  endif
+ #endif
+-- 
+1.7.10
+
