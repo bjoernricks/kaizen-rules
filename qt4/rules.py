@@ -5,10 +5,11 @@ from kaizen.system import Command, Make, Copy, Quilt, Mkdirs, Move, Delete
 
 class Qt4(kaizen.rules.ConfigureRules):
 
-    url = "http://get.qt.nokia.com/qt/source/qt-everywhere-opensource-src-%(version)s.tar.gz"
-    hash = { "md5" : "7960ba8e18ca31f0c6e4895a312f92ff",
-             "sha1" : "a074d0f605f009e23c63e0a4cb9b71c978146ffc" }
-    version = "4.8.1"
+    url = "http://releases.qt-project.org/qt4/source/qt-everywhere-opensource-src-%(version)s.tar.gz"
+
+    hash = { "md5" : "3c1146ddf56247e16782f96910a8423b",
+             "sha1" : "e1e2edef1d63ed677d6534d32800c2e1f7ad0e73" }
+    version = "4.8.2"
     name = "qt4"
 
     patch_cmd = Quilt
