@@ -1,0 +1,16 @@
+Index: libechonest-2.0.1/src/CMakeLists.txt
+===================================================================
+--- libechonest-2.0.1.orig/src/CMakeLists.txt
++++ libechonest-2.0.1/src/CMakeLists.txt
+@@ -47,9 +47,10 @@ ELSE( APPLE OR MINGW )
+   SET( OS_SPECIFIC_LINK_LIBRARIES ${QJSON_LDFLAGS} )
+ ENDIF( APPLE OR MINGW )
+ 
++link_directories(${QJSON_LIBRARY_DIRS})
+ 
+ add_library( echonest SHARED ${LIBECHONEST_SRC} )
+-target_link_libraries( echonest ${OS_SPECIFIC_LINK_LIBRARIES} ${QT_QTCORE_LIBRARY} ${QT_QTNETWORK_LIBRARY}  )
++target_link_libraries( echonest ${OS_SPECIFIC_LINK_LIBRARIES} ${QT_QTCORE_LIBRARY} ${QT_QTNETWORK_LIBRARY} ${QJSON_LIBRARIES} )
+ set_target_properties( echonest PROPERTIES VERSION ${ECHONEST_LIB_VERSION} SOVERSION ${ECHONEST_LIB_VERSION_SONAME} )
+ install( TARGETS echonest   RUNTIME DESTINATION bin
+                             LIBRARY DESTINATION lib${LIB_SUFFIX}
