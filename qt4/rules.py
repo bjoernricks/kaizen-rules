@@ -26,8 +26,11 @@ class Qt4(kaizen.rules.ConfigureRules):
                "pkg-config",
                "zlib"]
 
+    configure_cc = "gcc"
+    configure_cxx = "g++"
     configure_cpath = ["%(prefix)s/include"]
     configure_library_path = ["%(prefix)s/lib"]
+
     build_cpath = configure_cpath
     build_library_path = configure_library_path
 
