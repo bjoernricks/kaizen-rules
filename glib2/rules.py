@@ -2,6 +2,7 @@ import kaizen.rules
 import kaizen.run
 
 from kaizen.system import Replace, Copy, Command, Delete
+from kaizen.system.patch import Quilt
 
 class Glib(kaizen.rules.ConfigureRules):
 
@@ -10,6 +11,8 @@ class Glib(kaizen.rules.ConfigureRules):
              "sha1" : "70208757905037fa1f8b89797db0097c5e82a140" }
     version = "2.30.2"
     name = "glib"
+
+    patch_cmd = Quilt
 
     configure_args = ["--disable-dtrace", "--with-libiconv=native"]
     configure_path = "%(build_path)s"
@@ -35,7 +38,7 @@ class Glib(kaizen.rules.ConfigureRules):
 
     def post_configure(self):
         cmd = ["ed", "-", self.build_path + "/config.h"]
-        self.log.debug("Running ed on %s" % self.buld_path + "/config.h")
+        self.log.debug("Running ed on %s" % self.build_path + "/config.h")
         kaizen.run.call(cmd, not self.verbose, cwd=self.build_path,
                      inputdata=self.rules_path + "/config.h.ed")
 
