@@ -1,5 +1,7 @@
 import kaizen.rules
 
+from kaizen.system.patch import Quilt
+
 class Libffi(kaizen.rules.ConfigureRules):
 
     url = "ftp://sourceware.org/pub/libffi/libffi-3.0.10.tar.gz"
@@ -7,6 +9,8 @@ class Libffi(kaizen.rules.ConfigureRules):
              "sha1" : "97abf70e6a6d315d9259d58ac463663051d471e1" }
     version = "3.0.10"
     name = "libffi"
+
+    patch_cmd = Quilt
 
     patches = ["patch-configure-darwin11.diff",
                "patch-configure.diff"]
