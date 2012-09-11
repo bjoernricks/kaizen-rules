@@ -1,10 +1,13 @@
 import kaizen.rules
 
+from kaizen.system.patch import Quilt
+
 class Giflib(kaizen.rules.ConfigureRules):
 
-    url = "http://downloads.sourceforge.net/project/giflib/giflib%%204.x/giflib-%(version)s/giflib-%(version)s.tar.bz2"
-    hash = { "md5" : "7125644155ae6ad33dbc9fc15a14735f",
-             "sha1" : "22680f604ec92065f04caf00b1c180ba74fb8562" }
-    version = "4.1.6"
+    url = "http://downloads.sourceforge.net/project/giflib/giflib-4.x/giflib-%(version)s.tar.bz2"
+    hash = { "md5" : "711ad48551ee14db7c200b5f402df849",
+             "sha1" : "bc942711f75de7d8539f79be34d69c0d53c381c1" }
+    version = "4.2.0"
     name = "giflib"
 
+    patch_cmd = Quilt
