@@ -12,7 +12,5 @@ class Giflib(kaizen.rules.ConfigureRules):
 
     patch_cmd = Quilt
 
-    depends = ["xmlto", "docbook-xml", "docbook2x"]
-
     configure_args = ["--disable-x11"]
 
