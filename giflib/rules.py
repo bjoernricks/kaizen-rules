@@ -11,6 +11,3 @@ class Giflib(kaizen.rules.ConfigureRules):
     name = "giflib"
 
     patch_cmd = Quilt
-
-    configure_args = ["--disable-x11"]
-
