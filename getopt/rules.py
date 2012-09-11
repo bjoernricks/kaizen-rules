@@ -1,6 +1,7 @@
 import kaizen.rules
 
 from kaizen.system import Copy, Make
+from kaizen.system.patch import Quilt
 
 class Getopt(kaizen.rules.Rules):
 
@@ -11,7 +12,7 @@ class Getopt(kaizen.rules.Rules):
     name = "getopt"
 
     depends = ["gettext"]
-    patches = ["patch-Makefile.diff"]
+    patch_cmd = Quilt
 
     def configure(self):
         Copy(self.src_path + "/*", self.build_path).run()
