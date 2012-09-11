@@ -11,7 +11,7 @@ class Avahi(kaizen.rules.ConfigureRules):
     name = "avahi"
 
     depends = ["pkg-config", "glib2", "qt4", "gettext", "libexpat", "dbus",
-               "perl", "libdaemon", "gdbm"]
+               "perl", "libdaemon", "gdbm", "intltool"]
 
     configure_ldflags = ["-L%(prefix)s/lib"]
     configure_cppflags = ["-I%(prefix)s/include"]
