@@ -1,0 +1,10 @@
+Index: avahi-0.6.31/config.h.in
+===================================================================
+--- avahi-0.6.31.orig/.pc/fix-build-ipv6.diff/config.h.in
++++ avahi-0.6.31/config.h.in
+@@ -393,3 +393,5 @@
+ 
+ /* Define to `int' if <sys/types.h> doesn't define. */
+ #undef uid_t
++
++#define __APPLE_USE_RFC_2292
