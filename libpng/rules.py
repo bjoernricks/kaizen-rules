@@ -2,10 +2,10 @@ import kaizen.rules
 
 class Libpng(kaizen.rules.ConfigureRules):
 
-    url = "http://sourceforge.net/projects/libpng/files/libpng15/1.5.6/libpng-1.5.6.tar.bz2"
-    hash = { "md5" : "2107095191b0e8bd9a0f4f930c1948c3",
-             "sha1" : "e0a24cc51ebc68939a5027ea4874d5f351a52647" }
-    version = "1.5.6"
+    url = "http://sourceforge.net/projects/libpng/files/libpng15/%(version)s/libpng-%(version)s.tar.bz2"
+    hash = { "md5" : "d87f9c34ccab8242c00e41925839f6c9",
+             "sha1" : "e45110a5e6787819be50f31092f1a1d43b717de0" }
+    version = "1.5.12"
     name = "libpng"
 
     depends = ["zlib"]

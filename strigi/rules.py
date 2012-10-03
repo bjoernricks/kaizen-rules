@@ -8,9 +8,12 @@ class Strigi(kaizen.rules.CMakeRules):
     version = "0.7.5"
     name = "strigi"
 
-    depends = ["libxml2", "clucene", "dbus", "qt4"]
+    depends = ["libxml2", "dbus", "qt4", "bzip2", "zlib",
+               "libiconv", "perl", "pkg-config"]
 
     patches = ["patch-libsteamanalyzer-lib-CMakelists.txt.diff",
                "patch-libstreams-lib-CMakeLists.txt.diff"]
 
-    configure_args = ["-DCMAKE_BUILD_TYPE=Release"]
+    configure_args = ["-DCMAKE_BUILD_TYPE=Release",
+                      "-DENABLE_CLUCENE_NG=FALSE",
+                      "-DENABLE_CLUCENE=FALSE"]

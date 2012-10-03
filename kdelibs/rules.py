@@ -5,10 +5,10 @@ from kaizen.rules.groups import KDE
 
 class Kdelibs(kaizen.rules.CMakeRules):
 
-    url = "ftp://ftp.kde.org/pub/kde/stable/%(version)s/src/kdelibs-%(version)s.tar.bz2"
-    hash = { "md5" : "c19858c68f9a209ae521d7fb3c34747b",
-             "sha1" : "5e4744405734e6c3ce572ef7d16054390692b38a" }
-    version = "4.8.0"
+    url = "ftp://ftp.kde.org/pub/kde/stable/%(version)s/src/kdelibs-%(version)s.tar.xz"
+    hash = { "md5" : "421a0cb4e51db7d8eb6bb8aff508aeab",
+             "sha1" : "e86ee16ac7c412b0f6abe3754cb372a45d41c71b" }
+    version = "4.9.2"
     name = "kdelibs"
 
     groups = [KDE]
@@ -18,7 +18,8 @@ class Kdelibs(kaizen.rules.CMakeRules):
     depends = ["qt4", "perl", "zlib", "strigi", "attica", "openssl",
                "soprano", "shared-desktop-ontologies", "dbus", "libdbusmenu-qt",
                "automoc4", "xz", "bzip2", "pcre", "libjpeg", "avahi",
-               "giflib", "docbook-xsl", "docbook-xml", "grantlee", "qca"]
+               "giflib", "docbook-xsl", "docbook-xml", "grantlee", "qca",
+               "phonon", "shared-mime-info"]
 
     configure_args = ["-DWITH_ENCHANT=ON",
                       "-DWITH_Soprano=ON",
@@ -26,6 +27,7 @@ class Kdelibs(kaizen.rules.CMakeRules):
                       "-DWITH_HSPELL=OFF",
                       "-DWITH_FAM=OFF",
                       "-DBUNDLE_INSTALL_DIR=%(apps_dir)s/KDE4",
+                      "-DSHAREDDESKTOPONTOLOGIES_ROOT_DIR=%(prefix)s/share/ontology",
                       # "-DKDE_DISTRIBUTION_TEXT=kaizen software manager",
                       "-DCMAKE_BUILD_TYPE=Release",
                       ]
