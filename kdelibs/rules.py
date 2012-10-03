@@ -21,6 +21,8 @@ class Kdelibs(kaizen.rules.CMakeRules):
                "giflib", "docbook-xsl", "docbook-xml", "grantlee", "qca",
                "phonon", "shared-mime-info"]
 
+    configure_cc = "gcc"
+    configure_cxx = "g++"
     configure_args = ["-DWITH_ENCHANT=ON",
                       "-DWITH_Soprano=ON",
                       "-DKDE_DEFAULT_HOME=Library/Preferences/KDE",
