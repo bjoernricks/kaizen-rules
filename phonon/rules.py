@@ -2,12 +2,12 @@ import kaizen.rules
 
 class Phonon(kaizen.rules.CMakeRules):
 
-    url = "phonon-4.6.0.tar.bz2"
-    hash = { "md5" : "7b194cc3a5583c958f81bb41e0f044cb",
-             "sha1" : "dd7aabe789144d2263b596873eb34b57cc3a16a2" }
+    url = "ftp://ftp.kde.org/pub/kde/stable/phonon/%(version)s/src/phonon-%(version)s.tar.xz"
+    hash = { "md5" : "bbe0c1c62ed14c31479c4c1a6cf1e173",
+             "sha1" : "d8dbc188b58c6dd9c6a73d3742a25291e647bb95" }
     version = "4.6.0"
     name = "phonon"
 
     depends = ["qt4",
                "automoc4",
-               ]
+               "glib2"]
