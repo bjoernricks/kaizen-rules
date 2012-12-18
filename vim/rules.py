@@ -18,6 +18,7 @@ class Vim(kaizen.rules.ConfigureRules):
                       "--disable-netbeans",
                       "--disable-gui",
                       "--with-local-dir=%(prefix)s",
+                      "--with-features=huge",
                      ]
 
     depends = ["ctags", "cscope", "gettext", "libiconv"]
