@@ -1,6 +1,7 @@
 import kaizen.rules
 
 from kaizen.system import Copy
+from kaizen.system.patch import Quilt
 
 class Vim(kaizen.rules.ConfigureRules):
 
@@ -9,6 +10,8 @@ class Vim(kaizen.rules.ConfigureRules):
              "sha1" : "46faa96c5fab639899b1c655c23d8755b62f036f" }
     version = "7.3"
     name = "vim"
+
+    patch_cmd = Quilt
 
     src_path = "%(src_dir)s/vim73"
 
