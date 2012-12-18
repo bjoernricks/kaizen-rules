@@ -1,0 +1,12 @@
+Index: eartle-liblastfm-9b4efb5/src/CMakeLists.txt
+===================================================================
+--- eartle-liblastfm-9b4efb5.orig/src/CMakeLists.txt
++++ eartle-liblastfm-9b4efb5/src/CMakeLists.txt
+@@ -87,6 +87,7 @@
+     VERSION ${LASTFM_VERSION}
+     SOVERSION ${LASTFM_SOVERSION}
+     COMPILE_DEFINITIONS LASTFM_LIB
++    INSTALL_NAME_DIR ${CMAKE_INSTALL_LIBDIR}
+ )
+ 
+ install(TARGETS lastfm
