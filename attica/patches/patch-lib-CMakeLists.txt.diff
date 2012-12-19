@@ -1,6 +1,8 @@
---- a/lib/CMakeLists.txt.orig	2012-02-12 16:00:15.000000000 +0100
-+++ b/lib/CMakeLists.txt	2012-02-12 16:01:49.000000000 +0100
-@@ -103,6 +103,7 @@
+Index: attica-0.4.1/lib/CMakeLists.txt
+===================================================================
+--- attica-0.4.1.orig/lib/CMakeLists.txt
++++ attica-0.4.1/lib/CMakeLists.txt
+@@ -120,6 +120,7 @@
          SOVERSION ${CMAKE_LIBATTICA_VERSION_MAJOR}.${CMAKE_LIBATTICA_VERSION_MINOR}
          LINK_INTERFACE_LIBRARIES ""
          DEFINE_SYMBOL ATTICA_LIB_MAKEDLL
