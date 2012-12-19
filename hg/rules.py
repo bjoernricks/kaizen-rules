@@ -34,6 +34,9 @@ class Hg(MakeRules):
         Copy(os.path.join(self.build_path, "contrib", "hgk"),
              os.path.join(self.destroot_path + self.prefix, "bin",
                           "hgk")).run()
+        Copy(os.path.join(self.build_path, "hgeditor"),
+             os.path.join(self.destroot_path + self.prefix, "bin",
+                          "hgeditor")).run()
 
     def distclean(self):
         Delete(self.build_path).run()
