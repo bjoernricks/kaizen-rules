@@ -6,9 +6,9 @@ from kaizen.system import Make, Copy, Delete
 class Hg(MakeRules):
 
     url = "http://mercurial.selenic.com/release/mercurial-%(version)s.tar.gz"
-    hash = { "md5" : "22a46a3ae64a5d625f068e588b4d6ec2",
-             "sha1" : "59e42fd0aebabe8ec9bd59ca6a41416032f7ca48" }
-    version = "2.3.1"
+    hash = { "md5" : "31b328679951158a05f22c3323644b51",
+             "sha1" : "28c6a09200bb2e9918bf965ae5507bc4ba84bc1f" }
+    version = "2.4.1"
     depends = ["python-docutils"]
     name = "hg"
 
