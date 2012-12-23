@@ -1,4 +1,5 @@
 import os.path
+import sys
 
 from kaizen.rules import MakeRules
 from kaizen.system import Make, Copy, Delete
@@ -37,6 +38,11 @@ class Hg(MakeRules):
         Copy(os.path.join(self.build_path, "hgeditor"),
              os.path.join(self.destroot_path + self.prefix, "bin",
                           "hgeditor")).run()
+        # Delete locales
+        Delete(os.path.join(self.destroot_path + self.prefix, "lib",
+                            "python%s.%s" % (sys.version_info[0],
+                                             sys.version_info[1]),
+                            "site-packages", "mercurial", "locale")).run()
 
     def distclean(self):
         Delete(self.build_path).run()
