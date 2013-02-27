@@ -8,4 +8,4 @@ class Pythonsphinx(kaizen.rules.PythonRules):
     version = "1.1.2"
     name = "Sphinx"
 
-    depends = ["python-jinja2"]
+    depends = ["python-jinja2", "python-pygments"]
