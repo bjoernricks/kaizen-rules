@@ -2,8 +2,8 @@ import kaizen.rules
 
 class Pythonurwid(kaizen.rules.PythonRules):
 
-    url = "http://excess.org/urwid/urwid-1.0.2.tar.gz"
-    hash = { "md5" : "00542bbd15fae7ea60b02a7570edee2b",
-             "sha1" : "1f689120731c6e7eb44bf7a724b86265c89f6600" }
-    version = "1.0.2"
+    url = "https://pypi.python.org/packages/source/u/urwid/urwid-%(version)s.tar.gz"
+    hash = { "md5" : "932d199de6fc847eab2c151512220665",
+             "sha1" : "0d6aa34975bb516565cfbf951487d26161e400b7" }
+    version = "1.1.1"
     name = "urwid"
