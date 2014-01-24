@@ -3,7 +3,7 @@ import kaizen.rules
 class Pythonpep8(kaizen.rules.PythonRules):
 
     url = "https://pypi.python.org/packages/source/p/pep8/pep8-%(version)s.tar.gz"
-    hash = { "md5" : "c48dc736e09f4f76362572c4e8b55be3",
-             "sha1" : "ce93871c3f13c4cf5eec400bf36f5b04d1f72393" }
-    version = "1.4.4"
+    hash = { "md5" : "a03bb494859e87b42601b61b1b043a0c",
+             "sha1" : "33637f6cf409651826114baf2fd8bc68d144a86d" }
+    version = "1.4.6"
     name = "pep8"
