@@ -1,11 +1,13 @@
 import kaizen.rules
 
+
 class Pythonsphinx(kaizen.rules.PythonRules):
 
-    url = "http://pypi.python.org/packages/source/S/Sphinx/Sphinx-%(version)s.tar.gz"
-    hash = { "md5" : "b65a5d5d6172f3dcfefb4770ec63926e",
-             "sha1" : "92f422474e43345ab69dedceeedfd7d18c55da2d" }
-    version = "1.1.2"
+    url = "http://pypi.python.org/packages/source/S/Sphinx/" \
+          "Sphinx-%(version)s.tar.gz"
+    hash = {"md5": "104494f036889122c9f403ae065ae7a9",
+            "sha1": "448cdb89d96c85993e01fe793ce7786494cbcda7"}
+    version = "1.2.1"
     name = "Sphinx"
 
-    depends = ["python-jinja2", "python-pygments"]
+    depends = ["python-docutils", "python-jinja2", "python-pygments"]
